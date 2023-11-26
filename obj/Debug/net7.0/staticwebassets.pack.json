@@ -1,0 +1,125 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\Guttesen\\source\\repos\\Fjosid\\Fjosid\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\Fjosid.bundle.scp.css",
+      "PackagePath": "staticwebassets\\Fjosid.bundle.scp.css"
+    },
+    {
+      "Id": "C:\\Users\\Guttesen\\source\\repos\\Fjosid\\Fjosid\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Guttesen\\source\\repos\\Fjosid\\Fjosid\\wwwroot\\css\\bootstrap\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\css\\bootstrap\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Guttesen\\source\\repos\\Fjosid\\Fjosid\\wwwroot\\css\\open-iconic\\FONT-LICENSE",
+      "PackagePath": "staticwebassets\\css\\open-iconic"
+    },
+    {
+      "Id": "C:\\Users\\Guttesen\\source\\repos\\Fjosid\\Fjosid\\wwwroot\\css\\open-iconic\\ICON-LICENSE",
+      "PackagePath": "staticwebassets\\css\\open-iconic"
+    },
+    {
+      "Id": "C:\\Users\\Guttesen\\source\\repos\\Fjosid\\Fjosid\\wwwroot\\css\\open-iconic\\README.md",
+      "PackagePath": "staticwebassets\\css\\open-iconic\\README.md"
+    },
+    {
+      "Id": "C:\\Users\\Guttesen\\source\\repos\\Fjosid\\Fjosid\\wwwroot\\css\\open-iconic\\font\\css\\open-iconic-bootstrap.min.css",
+      "PackagePath": "staticwebassets\\css\\open-iconic\\font\\css\\open-iconic-bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Guttesen\\source\\repos\\Fjosid\\Fjosid\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.eot",
+      "PackagePath": "staticwebassets\\css\\open-iconic\\font\\fonts\\open-iconic.eot"
+    },
+    {
+      "Id": "C:\\Users\\Guttesen\\source\\repos\\Fjosid\\Fjosid\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.otf",
+      "PackagePath": "staticwebassets\\css\\open-iconic\\font\\fonts\\open-iconic.otf"
+    },
+    {
+      "Id": "C:\\Users\\Guttesen\\source\\repos\\Fjosid\\Fjosid\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.svg",
+      "PackagePath": "staticwebassets\\css\\open-iconic\\font\\fonts\\open-iconic.svg"
+    },
+    {
+      "Id": "C:\\Users\\Guttesen\\source\\repos\\Fjosid\\Fjosid\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.ttf",
+      "PackagePath": "staticwebassets\\css\\open-iconic\\font\\fonts\\open-iconic.ttf"
+    },
+    {
+      "Id": "C:\\Users\\Guttesen\\source\\repos\\Fjosid\\Fjosid\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.woff",
+      "PackagePath": "staticwebassets\\css\\open-iconic\\font\\fonts\\open-iconic.woff"
+    },
+    {
+      "Id": "C:\\Users\\Guttesen\\source\\repos\\Fjosid\\Fjosid\\wwwroot\\css\\site.css",
+      "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "C:\\Users\\Guttesen\\source\\repos\\Fjosid\\Fjosid\\wwwroot\\favicon.png",
+      "PackagePath": "staticwebassets\\favicon.png"
+    },
+    {
+      "Id": "C:\\Users\\Guttesen\\source\\repos\\Fjosid\\Fjosid\\wwwroot\\images\\eplir_1.jpg",
+      "PackagePath": "staticwebassets\\images\\eplir_1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Guttesen\\source\\repos\\Fjosid\\Fjosid\\wwwroot\\images\\eplir_2.jpg",
+      "PackagePath": "staticwebassets\\images\\eplir_2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Guttesen\\source\\repos\\Fjosid\\Fjosid\\wwwroot\\images\\fjosid_icon.jpg",
+      "PackagePath": "staticwebassets\\images\\fjosid_icon.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Guttesen\\source\\repos\\Fjosid\\Fjosid\\wwwroot\\images\\fjosid_icon_row.png",
+      "PackagePath": "staticwebassets\\images\\fjosid_icon_row.png"
+    },
+    {
+      "Id": "C:\\Users\\Guttesen\\source\\repos\\Fjosid\\Fjosid\\wwwroot\\images\\høli_1.jpg",
+      "PackagePath": "staticwebassets\\images\\høli_1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Guttesen\\source\\repos\\Fjosid\\Fjosid\\wwwroot\\images\\høli_2.jpg",
+      "PackagePath": "staticwebassets\\images\\høli_2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Guttesen\\source\\repos\\Fjosid\\Fjosid\\wwwroot\\images\\høli_3.jpg",
+      "PackagePath": "staticwebassets\\images\\høli_3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Guttesen\\source\\repos\\Fjosid\\Fjosid\\wwwroot\\images\\matur_1.jpg",
+      "PackagePath": "staticwebassets\\images\\matur_1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Guttesen\\source\\repos\\Fjosid\\Fjosid\\wwwroot\\images\\neyt_1.jpg",
+      "PackagePath": "staticwebassets\\images\\neyt_1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Guttesen\\source\\repos\\Fjosid\\Fjosid\\wwwroot\\images\\uttanfyri_1.jpg",
+      "PackagePath": "staticwebassets\\images\\uttanfyri_1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Guttesen\\source\\repos\\Fjosid\\Fjosid\\wwwroot\\images\\uttanfyri_2.jpg",
+      "PackagePath": "staticwebassets\\images\\uttanfyri_2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Guttesen\\source\\repos\\Fjosid\\Fjosid\\wwwroot\\images\\vesi_1.jpg",
+      "PackagePath": "staticwebassets\\images\\vesi_1.jpg"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.Fjosid.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.build.Fjosid.props",
+      "PackagePath": "build\\Fjosid.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildMultiTargeting.Fjosid.props",
+      "PackagePath": "buildMultiTargeting\\Fjosid.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildTransitive.Fjosid.props",
+      "PackagePath": "buildTransitive\\Fjosid.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

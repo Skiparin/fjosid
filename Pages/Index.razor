@@ -1,0 +1,99 @@
+﻿@page "/"
+
+<PageTitle>Index</PageTitle>
+
+<div style="margin-bottom:32px;">
+
+    <div style="display: flex; flex-direction:row;">
+        <div style="width: 50%; height: 700px; padding: 5rem;">
+            <h2>Rustic Ambiance and Heritage</h2>
+            <p style="line-height: 25px; font-size: 18px;">
+                Steeped in history and rustic charm, our restaurant embraces the heritage of its origins—a beautifully renovated barn that once stood as the heart of a bustling farm. We've meticulously preserved the barn's authentic character, from the weathered wooden beams to the original stone walls, creating a warm, inviting ambiance that transports you to a bygone era. Each corner of our dining space tells a story, adorned with vintage farm tools and photographs that chronicle the barn's transformation. As you dine with us, you're not just enjoying a meal; you're partaking in a rich legacy that celebrates the timeless beauty of rural life and the enduring spirit of the land.
+            </p>
+        </div>
+        <div style="width: 50%; height: 700px;">
+            <MudImage Height="700" Src="images/høli_1.jpg"></MudImage>
+        </div>
+    </div>
+    <div style="display: flex; flex-direction:row;">
+        <div style="width: 50%; height: 700px;display: flex;flex-direction: row;flex-wrap: wrap;justify-content: end;">
+            <MudImage Height="700" Src="images/neyt_1.jpg"></MudImage>
+        </div>
+        <div style="width: 50%; height: 700px; padding: 5rem;">
+            <h2>Farm-to-Table Cuisine</h2>
+            <p style="line-height: 25px; font-size: 18px;">
+                At the heart of our culinary philosophy lies a deep commitment to farm-to-table dining, where every dish begins with fresh, locally-sourced ingredients. Our menu is a celebration of the seasons, featuring an ever-changing array of flavors that highlight the best of what the local farms offer. From crisp, garden-picked vegetables to free-range meats and artisanal cheeses, each ingredient is carefully selected to ensure the highest quality and taste. Our chefs artfully blend tradition with innovation, crafting dishes that not only delight the palate but also tell the story of the land and the hands that nurtured it. Dining with us is more than a meal; it's an intimate journey through the local countryside's bountiful produce and a tribute to the community of farmers and artisans who bring their passion to your plate.
+            </p>
+        </div>
+    </div>
+    <div style="display: flex; flex-direction:row;">
+        <div style="width: 50%; height: 700px; padding: 5rem;">
+            <h2>Unique Dining Experience</h2>
+            <p style="line-height: 25px; font-size: 18px;">
+                Our restaurant proudly stands as a beacon of sustainability and community spirit. We're committed to eco-friendly practices, from sourcing ingredients from local farms to minimizing our environmental footprint in every aspect of operation. We believe in giving back to the land that feeds us, engaging in sustainable agriculture and energy-efficient initiatives. Beyond our kitchen, we foster a strong sense of community by supporting local artisans, hosting events that celebrate local culture, and participating in initiatives that enrich our neighborhood. Each meal served not only brings delight to your taste buds but also contributes to a greater cause—nurturing a sustainable future and strengthening the bonds within our community.
+            </p>
+        </div>
+        <div style="width: 50%; height: 700px;">
+            <MudImage Height="700" Src="images/eplir_1.jpg"></MudImage>
+        </div>
+    </div>
+
+</div>
+
+
+<MudCarousel Class="mud-width-full" Style="height:700px;" ShowArrows="@arrows" ShowBullets="@bullets" EnableSwipeGesture="@enableSwipeGesture" AutoCycle="@autocycle" TData="object">
+    <MudCarouselItem Transition="transition" Style="display:flex; justify-content:center;">
+        <div class="d-flex" style="height:100%">
+            <MudImage Src="images/høli_1.jpg"></MudImage>
+        </div>
+    </MudCarouselItem>
+    <MudCarouselItem Transition="transition" Style="display:flex; justify-content:center;">
+        <div class="d-flex" style="height:100%">
+            <MudImage Src="images/matur_1.jpg"></MudImage>
+        </div>
+    </MudCarouselItem>
+    <MudCarouselItem Transition="transition" Style="display:flex; justify-content:center;" >
+        <div class="d-flex" style="height:100%;">
+            <MudImage Src="images/eplir_1.jpg"></MudImage>
+        </div>
+    </MudCarouselItem>
+    <MudCarouselItem Transition="transition" Style="display:flex; justify-content:center;">
+        <div class="d-flex" style="height:100%;">
+            <MudImage Src="images/høli_2.jpg"></MudImage>
+        </div>
+    </MudCarouselItem>
+    <MudCarouselItem Transition="transition" Style="display:flex; justify-content:center;">
+        <div class="d-flex" style="height:100%">
+            <MudImage Src="images/eplir_2.jpg"></MudImage>
+        </div>
+    </MudCarouselItem>
+    <MudCarouselItem Transition="transition" Style="display:flex; justify-content:center;">
+        <div class="d-flex" style="height:100%">
+            <MudImage Src="images/høli_3.jpg"></MudImage>
+        </div>
+    </MudCarouselItem>
+    <MudCarouselItem Transition="transition" Style="display:flex; justify-content:center;">
+        <div class="d-flex" style="height:100%;">
+            <MudImage Src="images/uttanfyri_1.jpg"></MudImage>
+        </div>
+    </MudCarouselItem>
+    <MudCarouselItem Transition="transition" Style="display:flex; justify-content:center;">
+        <div class="d-flex" style="height:100%">
+            <MudImage Src="images/uttanfyri_2.jpg"></MudImage>
+        </div>
+    </MudCarouselItem>
+    <MudCarouselItem Transition="transition" Style="display:flex; justify-content:center;">
+        <div class="d-flex" style="height:100%">
+            <MudImage Src="images/vesi_1.jpg"></MudImage>
+        </div>
+    </MudCarouselItem>
+</MudCarousel>
+
+
+
+
+<div>
+    <div style="">
+        <MudDatePicker PickerVariant="PickerVariant.Static" Date="@(DateTime.Today.AddDays(1))" />
+    </div>
+</div>
