@@ -33,5 +33,23 @@
 
     <script src="_framework/blazor.server.js"></script>
     <script src="_content/MudBlazor/MudBlazor.min.js"></script>
+    <script>
+        function scrollToBooking() {
+            var element = document.getElementById("booking");
+            element.scrollIntoView({ behavior: "smooth" });
+        }
+    </script>
+    <script>
+        function checkScrollAndAnimate() {
+            document.querySelectorAll('.section-to-animate').forEach(el => {
+                var rect = el.getBoundingClientRect();
+                if (rect.top < window.innerHeight * 0.8) {
+                    el.classList.add('animate-up');
+                }
+            });
+        }
+
+        window.addEventListener('scroll', checkScrollAndAnimate);
+    </script>
 </body>
 </html>
