@@ -66,3 +66,24 @@ a, .btn-link {
     .blazor-error-boundary::after {
         content: "An error has occurred."
     }
+
+@keyframes slideUp {
+    from {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.section-to-animate {
+    opacity: 0; /* initially invisible */
+    will-change: transform, opacity; /* optimizes the animation */
+}
+
+.animate-up {
+    animation: slideUp 1s ease forwards;
+}
