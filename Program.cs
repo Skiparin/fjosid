@@ -13,7 +13,12 @@ namespace Fjosid
 
             // Add services to the container.
             builder.Services.AddRazorPages();
-            builder.Services.AddServerSideBlazor();
+            builder.Services.AddServerSideBlazor()
+                .AddHubOptions(options =>
+            {
+                options.ClientTimeoutInterval = TimeSpan.FromSeconds(60);
+                options.HandshakeTimeout = TimeSpan.FromSeconds(30);
+            }); ;
             builder.Services.AddSingleton<WeatherForecastService>();
 
             builder.Services.AddMudServices();
