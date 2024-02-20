@@ -63,9 +63,189 @@ a, .btn-link {
     color: white;
 }
 
-    .blazor-error-boundary::after {
-        content: "An error has occurred."
-    }
+.blazor-error-boundary::after {
+    content: "An error has occurred."
+}
+
+.intro-section {
+    display: flex;
+}
+
+.intro-section__text-wrapper {
+    width: 66.66666667%;
+    padding: 5rem;
+}
+
+.intro-section__title {
+    font-weight: 600;
+    font-size: 50px;
+    line-height: 1.2;
+    color: #333333;
+    margin-bottom: 1.5rem;
+}
+
+.intro-section__text {
+    font-family: Poppins, Arial, sans-serif;
+    font-size: 17px;
+    line-height: 2;
+    font-weight: 400;
+    color: #666666;
+}
+
+.intro-section__image-wrapper {
+    width: 33.3333333%;
+    display: flex;
+    column-gap: 4px;
+}
+
+.intro-section__two-image-wrapper {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 4px;
+}
+
+.intro-section__image {
+    width: 100%;
+    height: 350px;
+}
+
+.details-section {
+    margin-bottom: 6rem;
+}
+
+.details-section__text-image-section {
+    display: flex;
+    flex-direction: row;
+    background-color: #f7f7f7;
+}
+
+.details-section__image-wrapper {
+    width: 33.3333333%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: end;
+}
+
+.details-section__image {
+    width: 100%;
+    height: 500px;
+}
+
+.details-section__text-wrapper {
+    width: 66.66666667%;
+    padding: 5rem;
+}
+
+.details-section__title {
+    font-weight: 600;
+    font-size: 50px;
+    line-height: 1.2;
+    color: #333333;
+    margin-bottom: 1.5rem;
+}
+
+.details-section__text {
+    font-family: Poppins, Arial, sans-serif;
+    font-size: 17px;
+    line-height: 2;
+    font-weight: 400;
+    color: #666666;
+}
+
+.details-section__button-wrapper {
+    display: flex;
+    justify-content: end;
+}
+
+.offers-section {
+    margin-bottom: 6rem;
+    display: flex;
+    justify-content: center;
+}
+
+.offers-section-wrapper {
+    width: 80%;
+    text-align: center;
+}
+
+.offers-title {
+    font-weight: 600;
+    font-size: 50px;
+    line-height: 1.2;
+    color: #333333;
+    margin-bottom: 1.5rem;
+}
+
+.offers-section__contant-wrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    column-gap: 32px;
+}
+
+.offers-section__offer-section {
+    text-align: center;
+    max-width: 500px;
+}
+
+.offers-section__offer-title {
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 1.2;
+    color: #333333;
+    margin-bottom: 0.5rem;
+}
+
+.offers-section__offer-image {
+    max-height: 375px;
+    width: 100%;
+}
+
+.booking-section {
+    margin-bottom: 6rem;
+}
+
+.booking-section__title {
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 1.2;
+    color: #333333;
+    margin-bottom: 1.5rem;
+}
+
+.booking-section__info-wrapper {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.booking-section__info-wrapper-two {
+    display: flex;
+    flex-direction: row;
+    width: 50%;
+    justify-content: space-between;
+}
+
+.booking-section__info-text-field-wrapper {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    margin-bottom: 8px;
+}
+
+.booking-section__info-button-wrapper {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.booking-section__info-button-wrapper-two {
+    width: 50%;
+    justify-content: end;
+    display: flex;
+}
 
 @keyframes slideUp {
     from {
@@ -86,4 +266,69 @@ a, .btn-link {
 
 .animate-up {
     animation: slideUp 1s ease forwards;
+}
+
+@media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    .intro-section {
+        flex-direction: column;
+    }
+
+    .intro-section__text-wrapper {
+        width: 90%;
+        padding: 0.5rem;
+    }
+
+    .intro-section__image-wrapper {
+        width: 100%;
+        padding: 0.5rem;
+    }
+
+    .intro-section__two-image-wrapper {
+        width: 45%;
+    }
+
+    .details-section {
+        margin-bottom: 3rem;
+    }
+
+    .details-section__text-image-section {
+        flex-direction: column-reverse;
+    }
+
+    .details-section__image-wrapper {
+        width: 100%;
+    }
+
+    .details-section__text-wrapper {
+        width: 91%;
+        padding: 0.75rem;
+    }
+
+    .offers-section {
+        justify-content: normal;
+    }
+
+    .offers-section-wrapper {
+        width: 90%;
+        padding: 0.5rem;
+    }
+
+    .offers-section__contant-wrapper {
+        flex-direction: column;
+        row-gap: 32px;
+    }
+
+    .offers-section__offer-section {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .booking-section__info-wrapper {
+        flex-direction: column;
+    }
+
+    .booking-section__info-wrapper-two {
+        flex-direction: column;
+    }
 }

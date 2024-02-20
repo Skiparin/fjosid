@@ -23,6 +23,8 @@ namespace Fjosid
 
             builder.Services.AddMudServices();
 
+            builder.Services.AddWindowsService();
+
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.
