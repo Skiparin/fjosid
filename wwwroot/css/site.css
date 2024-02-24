@@ -120,6 +120,12 @@ a, .btn-link {
     background-color: #f7f7f7;
 }
 
+.details-section__text-image-section-2 {
+    display: flex;
+    flex-direction: row;
+    background-color: #f7f7f7;
+}
+
 .details-section__image-wrapper {
     width: 33.3333333%;
     display: flex;
@@ -271,11 +277,11 @@ a, .btn-link {
 @media only screen and (max-width: 768px) {
     /* For mobile phones: */
     .intro-section {
-        flex-direction: column;
+        flex-direction: column-reverse;
     }
 
     .intro-section__text-wrapper {
-        width: 90%;
+        width: 100%;
         padding: 0.5rem;
     }
 
@@ -285,14 +291,18 @@ a, .btn-link {
     }
 
     .intro-section__two-image-wrapper {
-        width: 45%;
+        width: 50%;
     }
 
     .details-section {
-        margin-bottom: 3rem;
+        margin-bottom: 0rem;
     }
 
     .details-section__text-image-section {
+        flex-direction: column;
+    }
+
+    .details-section__text-image-section-2 {
         flex-direction: column-reverse;
     }
 
@@ -301,17 +311,18 @@ a, .btn-link {
     }
 
     .details-section__text-wrapper {
-        width: 91%;
+        width: 100%;
         padding: 0.75rem;
     }
 
     .offers-section {
         justify-content: normal;
+        margin-bottom: 0rem;
     }
 
     .offers-section-wrapper {
-        width: 90%;
-        padding: 0.5rem;
+        width: 100%;
+        padding: 0.5rem 0rem;
     }
 
     .offers-section__contant-wrapper {
