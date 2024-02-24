@@ -2,13 +2,14 @@
 @using System.Text.RegularExpressions
 @using System.ComponentModel.DataAnnotations
 
+
 <PageTitle>Index</PageTitle>
 
 <div>
     <div class="intro-section">
         <div class="intro-section__text-wrapper">
             <h2 class="intro-section__title">
-                Farm-to-Table Cuisine
+                Fjósið
             </h2>
             <p class="intro-section__text">
                 At the heart of our culinary philosophy lies a deep commitment to farm-to-table dining, where every dish begins with fresh, locally-sourced ingredients. Our menu is a celebration of the seasons, featuring an ever-changing array of flavors that highlight the best of what the local farms offer. From crisp, garden-picked vegetables to free-range meats and artisanal cheeses, each ingredient is carefully selected to ensure the highest quality and taste. Our chefs artfully blend tradition with innovation, crafting dishes that not only delight the palate but also tell the story of the land and the hands that nurtured it. Dining with us is more than a meal; it's an intimate journey through the local countryside's bountiful produce and a tribute to the community of farmers and artisans who bring their passion to your plate.
@@ -56,7 +57,7 @@
                 </div>
             </div>
         </div>
-        <div class="section-to-animate details-section__text-image-section" style="background-color: #FFFFFF;">
+        <div class="section-to-animate details-section__text-image-section-2" style="background-color: #FFFFFF;">
             <div class="details-section__text-wrapper">
                 <h2 class="details-section__title">
                     Farm-to-Table Cuisine
@@ -86,10 +87,49 @@
                     Our restaurant proudly stands as a beacon of sustainability and community spirit. We're committed to eco-friendly practices, from sourcing ingredients from local farms to minimizing our environmental footprint in every aspect of operation. We believe in giving back to the land that feeds us, engaging in sustainable agriculture and energy-efficient initiatives. Beyond our kitchen, we foster a strong sense of community by supporting local artisans, hosting events that celebrate local culture, and participating in initiatives that enrich our neighborhood. Each meal served not only brings delight to your taste buds but also contributes to a greater cause—nurturing a sustainable future and strengthening the bonds within our community.
                 </p>
                 <div class="details-section__button-wrapper">
-                    <MudButton @onclick="ScrollToBooking" ButtonType="ButtonType.Button" Variant="Variant.Filled" Color="Color.Success">
-                        Reserve Booking
+                    <MudButton ButtonType="ButtonType.Button" Variant="Variant.Filled" Color="Color.Success">
+                        <a href="images/Menu.pdf" target="_blank" style="color: rgba(255,255,255,1);">See Menu</a>
                     </MudButton>
                 </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="intro-section">
+    <div class="intro-section__text-wrapper">
+        <h2 class="offers-title">
+            About us
+        </h2>
+        <p class="intro-section__text">
+        Heri is the farmer and the one who came up with the idea of making part of the barn into a
+        restaurant/venue. Jenny is the wife, boss, chef and cleaner ;-)
+        Ellef and Eystein are the owners of bluegate.fo, which is a company with 3 fast boats, that they use for
+        sightseeing. Each boat has the capacity of 12 persons and one of the ideas with this barn, was the
+        possibility to sail and eat in one booking.
+        Tróndur has 4 cosy cottages made in a traditional way with grass roof, stones and are painted black. The
+        company is called The view because of the outstanding view in the village of Bøur. There is also
+        possibility to stay at The view and eat at Fjósið, but you need to be min. 8 pers.
+        Eyðfinn is Heri´s cousin and a constructor. Poula, his wife also cooks and cleans in Fjósið.
+        Tórður is Eyðfinn and Poula´s son and will soon finish as a constructor. He was in charge of renovating
+        the barn loft into ”Fjósið”.
+        </p>
+    </div>
+    <div class="intro-section__image-wrapper">
+        <div class="intro-section__two-image-wrapper">
+            <div>
+                <MudImage class="intro-section__image" ObjectFit=ObjectFit.Cover Src="images/høli_1.jpg"></MudImage>
+            </div>
+            <div>
+                <MudImage class="intro-section__image" ObjectFit=ObjectFit.Cover Src="images/matur_17.jpg"></MudImage>
+            </div>
+        </div>
+        <div class="intro-section__two-image-wrapper">
+            <div>
+                <MudImage class="intro-section__image" ObjectFit=ObjectFit.Cover Src="images/høli_11.jpg"></MudImage>
+            </div>
+            <div>
+                <MudImage class="intro-section__image" ObjectFit=ObjectFit.Cover Src="images/matur_2.jpg"></MudImage>
             </div>
         </div>
     </div>
@@ -119,64 +159,6 @@
                 <h4 class="offers-section__offer-title">
                     Rent Fjósið as a Venue
                 </h4>
-            </div>
-        </div>
-    </div>
-</div>
-
-<div class="section-to-animate" id="booking">
-    <h2 class="booking-section__title">Booking</h2>
-
-    <div class="booking-section">
-        <div class="booking-section__info-wrapper">
-            <div class="booking-section__info-wrapper-two">
-                <div>
-                    <MudDatePicker PickerVariant="PickerVariant.Static" Date="@(DateTime.Today.AddDays(1))" />
-                </div>
-                <div>
-                    <MudGrid>
-                        <MudItem Style="max-width: 100%;flex-basis: 100%;" xs="12" sm="7">
-                            <MudPaper Class="pa-6">
-                                <MudForm @ref="form" @bind-IsValid="@success" @bind-Errors="@errors">
-                                    <MudTextField Style="margin-bottom:8px;"
-                                        FullWidth="true"
-                                        T="string"
-                                        Label="Number of guests"
-                                        Required="true" 
-                                        RequiredError="Number of guests is required" 
-                                        Validation="@(new Func<string, IEnumerable<string>>(NumberOfGuests))" />
-                                    <MudTextField Style="margin-bottom:8px;"
-                                        FullWidth="true"
-                                        T="string"
-                                        Label="Name"
-                                        Required="true"
-                                        RequiredError="Name is required" />
-                                    <MudTextField Style="margin-bottom:8px;" 
-                                        FullWidth="true"
-                                        T="string"
-                                        Label="Email"
-                                        Required="true"
-                                        RequiredError="Email is required!"
-                                        Validation="@(new EmailAddressAttribute() {ErrorMessage = "The email address is invalid"})" />
-                                    <MudTextField FullWidth="true" T="string" Label="Phonenumber" Required="true" RequiredError="Phonenumber is required"
-                                        Validation="@(new PhoneAttribute() {ErrorMessage = "The phonenumber is invalid"})" />
-                                </MudForm>
-                            </MudPaper>
-                        </MudItem>
-                    </MudGrid>
-                </div>
-            </div>
-        </div>
-        <div class="booking-section__info-text-field-wrapper">
-            <div style="width: 50%;">
-                <MudTextField T="string" Label="Details" Variant="Variant.Outlined" Lines="5" />
-            </div>
-        </div>
-        <div class="booking-section__info-button-wrapper">
-            <div class="booking-section__info-button-wrapper-two">
-                <MudButton ButtonType="ButtonType.Button" Variant="Variant.Filled" Color="Color.Success">
-                    Reserve Booking
-                </MudButton>
             </div>
         </div>
     </div>
