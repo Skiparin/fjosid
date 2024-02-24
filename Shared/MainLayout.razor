@@ -7,19 +7,38 @@
 <PageTitle>Fjosid</PageTitle>
 
 <div class="page">
-    <div class="top-panel" style="background: rgba(0, 0, 0, 1);">
-        <img src="images/fjosid_icon_row.png" alt="Icon" />
-        <nav>
-            <ul>
-                <li><a style="color: goldenrod;" href="/">Home</a></li>
-                <li><a style="color: goldenrod;" href="/about">About</a></li>
-            </ul>
-        </nav>
+    <div class="top-panel" style="background: rgba(0, 0, 0, 1); display: flex; justify-content: space-between;">
+        <div style="display: flex; align-items: center;">
+            <img src="images/fjosid_icon_row.png" alt="Icon" />
+            <nav>
+                <ul>
+                    <li><a style="color: goldenrod;" href="/">Home</a></li>
+                    <li><a style="color: goldenrod;" href="/Booking">Booking</a></li>
+                </ul>
+            </nav>
+        </div>
+        
+        <div style="margin-right: 16px; gap: 24px; display: flex; align-items: center;">
+            <a target="_blank" style="color: goldenrod;" href="https://www.facebook.com/profile.php?id=61551701065518"><i class="fa fa-facebook" style="font-size:24px"></i></a>
+            <a target="_blank" style="color: goldenrod;" href="https://www.instagram.com/fjosid2023/"><i class="fa fa-instagram" style="font-size:24px"></i></a>
+
+            <MudToggleGroup T="int" Dense="true" SelectionMode="SelectionMode.ToggleSelection" @bind-Value="LanguageId">
+                <MudToggleItem T="int" Value="1" Text="FO" />
+                <MudToggleItem T="int" Value="2" Text="EN" />
+            </MudToggleGroup>
+        </div>
     </div>
 
     <main>
         <article class="content">
-            @Body
+            <CascadingValue Value="_value3">
+                @Body
+            </CascadingValue>
         </article>
     </main>
 </div>
+
+@code {
+    [CascadingParameter]
+    public int LanguageId { get; set; } = 1;
+}
