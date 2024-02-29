@@ -210,7 +210,7 @@ a, .btn-link {
 }
 
 .booking-section {
-    margin-bottom: 6rem;
+    width: 100%;
 }
 
 .booking-section__title {
@@ -219,31 +219,33 @@ a, .btn-link {
     line-height: 1.2;
     color: #333333;
     margin-bottom: 1.5rem;
+    text-align: center;
 }
 
 .booking-section__info-wrapper {
     display: flex;
     justify-content: center;
     flex-direction: row;
+    margin-bottom: 16px;
 }
 
 .booking-section__info-wrapper-two {
     display: flex;
     flex-direction: row;
-    width: 50%;
     justify-content: space-between;
+    width: 100%;
 }
 
 .booking-section__info-text-field-wrapper {
     display: flex;
     justify-content: center;
     flex-direction: row;
-    margin-bottom: 8px;
+    margin-bottom: 16px;
 }
 
 .booking-section__info-button-wrapper {
     display: flex;
-    justify-content: center;
+    justify-content: end;
     flex-direction: row;
 }
 

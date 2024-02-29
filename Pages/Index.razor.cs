@@ -30,9 +30,9 @@ namespace Fjosid.Pages
             NavigationManager.NavigateTo("/Booking");
         }
 
-        private void NavToGallary()
+        private void NavToGallery()
         {
-            NavigationManager.NavigateTo("/Gallary");
+            NavigationManager.NavigateTo("/Gallery");
         }
     }
 }

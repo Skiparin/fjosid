@@ -2,7 +2,7 @@
 
 namespace Fjosid.Pages
 {
-    public partial class Gallary
+    public partial class Gallery
     {
         private bool arrows = true;
         private bool bullets = true;

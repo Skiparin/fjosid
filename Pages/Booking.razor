@@ -2,59 +2,82 @@
 @using System.Text.RegularExpressions
 @using System.ComponentModel.DataAnnotations
 
-<div id="booking">
-    <h2 class="booking-section__title">Booking</h2>
+<div style="display: flex; justify-content: center; background: #f7f7f7;">
+    <div id="booking" style="width: 50%; align-items: center; display: flex; flex-direction: column; background: white; padding: 32px;">
+        <h2 class="booking-section__title">Booking</h2>
 
-    <div class="booking-section">
-        <div class="booking-section__info-wrapper">
-            <div class="booking-section__info-wrapper-two">
-                <div>
-                    <MudDatePicker PickerVariant="PickerVariant.Static" Date="@(DateTime.Today.AddDays(1))" />
-                </div>
-                <div>
-                    <MudGrid>
-                        <MudItem Style="max-width: 100%;flex-basis: 100%;" xs="12" sm="7">
-                            <MudPaper Class="pa-6">
-                                <MudForm @ref="form" @bind-IsValid="@success" @bind-Errors="@errors">
+        <div class="booking-section">
+            <div class="booking-section__info-wrapper">
+                <div class="booking-section__info-wrapper-two">
+                    <div style="width: 100%;">
+                        <MudForm @ref="form" @bind-IsValid="@success" @bind-Errors="@errors">
+                            <div style="display: flex; gap: 32px">
+                                <div style="width: 100%;">
+                                    <MudDatePicker PickerVariant="PickerVariant.Inline" Date="@(DateTime.Today.AddDays(1))" />
+                                </div>
+                                <div style="width: 100%;">
                                     <MudTextField Style="margin-bottom:8px;"
-                                        FullWidth="true"
-                                        T="string"
-                                        Label="Number of guests"
-                                        Required="true" 
-                                        RequiredError="Number of guests is required" 
-                                        Validation="@(new Func<string, IEnumerable<string>>(NumberOfGuests))" />
+                                                  FullWidth="true"
+                                                  T="string"
+                                                  Label="Number of guests"
+                                                  Required="true"
+                                                  RequiredError="Number of guests is required"
+                                                  Validation="@(new Func<string, IEnumerable<string>>(NumberOfGuests))" />
+                                </div>
+                            </div>
+                            <div style="display: flex; gap: 32px">
+                                <div style="width: 100%;">
                                     <MudTextField Style="margin-bottom:8px;"
-                                        FullWidth="true"
-                                        T="string"
-                                        Label="Name"
-                                        Required="true"
-                                        RequiredError="Name is required" />
-                                    <MudTextField Style="margin-bottom:8px;" 
-                                        FullWidth="true"
-                                        T="string"
-                                        Label="Email"
-                                        Required="true"
-                                        RequiredError="Email is required!"
-                                        Validation="@(new EmailAddressAttribute() {ErrorMessage = "The email address is invalid"})" />
-                                    <MudTextField FullWidth="true" T="string" Label="Phonenumber" Required="true" RequiredError="Phonenumber is required"
-                                        Validation="@(new PhoneAttribute() {ErrorMessage = "The phonenumber is invalid"})" />
-                                </MudForm>
-                            </MudPaper>
-                        </MudItem>
-                    </MudGrid>
+                                                  FullWidth="true"
+                                                  T="string"
+                                                  Label="First name"
+                                                  Required="true"
+                                                  RequiredError="First name is required" />
+                                </div>
+                                <div style="width: 100%;">
+                                    <MudTextField Style="margin-bottom:8px;"
+                                                  FullWidth="true"
+                                                  T="string"
+                                                  Label="Last name"
+                                                  Required="true"
+                                                  RequiredError="Last name is required" />
+                                </div>
+                            </div>
+                            <div style="display: flex; gap: 32px">
+                                <div style="width: 100%;">
+                                    <MudTextField Style="margin-bottom:8px;"
+                                                  FullWidth="true"
+                                                  T="string"
+                                                  Label="Email"
+                                                  Required="true"
+                                                  RequiredError="Email is required!"
+                                                  Validation="@(new EmailAddressAttribute() {ErrorMessage = "The email address is invalid"})" />
+                                </div>
+                                <div style="width: 100%;">
+                                    <MudTextField Style="margin-bottom:8px;"
+                                                  FullWidth="true"
+                                                  T="string"
+                                                  Label="Phonenumber"
+                                                  Required="true"
+                                                  RequiredError="Phonenumber is required"
+                                                  Validation="@(new PhoneAttribute() {ErrorMessage = "The phonenumber is invalid"})" />
+                                </div>
+                            </div>
+                        </MudForm>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="booking-section__info-text-field-wrapper">
-            <div style="width: 50%;">
-                <MudTextField T="string" Label="Details" Variant="Variant.Outlined" Lines="5" />
+            <div class="booking-section__info-text-field-wrapper">
+                <div style="width: 100%;">
+                    <MudTextField T="string" Label="Message" Variant="Variant.Outlined" Lines="5" />
+                </div>
             </div>
-        </div>
-        <div class="booking-section__info-button-wrapper">
-            <div class="booking-section__info-button-wrapper-two">
-                <MudButton ButtonType="ButtonType.Button" Variant="Variant.Filled" Color="Color.Success">
-                    Reserve Booking
-                </MudButton>
+            <div class="booking-section__info-button-wrapper">
+                <div class="booking-section__info-button-wrapper-two">
+                    <MudButton ButtonType="ButtonType.Button" Variant="Variant.Filled" Color="Color.Success">
+                        Reserve Booking
+                    </MudButton>
+                </div>
             </div>
         </div>
     </div>
