@@ -9,11 +9,14 @@
 <div class="page">
     <div class="top-panel" style="background: rgba(0, 0, 0, 1); display: flex; justify-content: space-between;">
         <div style="display: flex; align-items: center;">
-            <img src="images/fjosid_icon_row.png" alt="Icon" />
+            <a href="/">
+                <img src="images/fjosid_icon_row.png" alt="Icon" />
+            </a>
             <nav>
                 <ul>
-                    <li><a style="color: goldenrod;" href="/">Home</a></li>
+                    @* <li><a style="color: goldenrod;" href="/">Home</a></li> *@
                     <li><a style="color: goldenrod;" href="/Booking">Booking</a></li>
+                    <li><a style="color: goldenrod;" href="/Gallary">Gallary</a></li>
                 </ul>
             </nav>
         </div>
@@ -31,11 +34,52 @@
 
     <main>
         <article class="content">
-            <CascadingValue Value="_value3">
+            <CascadingValue Value="LanguageId">
                 @Body
             </CascadingValue>
         </article>
     </main>
+
+    <div class="bottom">
+        <div>
+            <a href="/">
+                <img src="images/fjosid_icon_row.png" style="width: 170px;" alt="Icon" />
+            </a>
+        </div>
+        <div class="bottom__info">
+            <span style="color: goldenrod;">
+                Fjósið
+            </span>
+            <span style="color: goldenrod;">
+                1 TRAÐARVEGUR
+            </span>
+            <span style="color: goldenrod;">
+                FO-386, BØUR
+            </span>
+            <span style="color: goldenrod;">
+                FAROE ISLANDS
+            </span>
+            <span style="color: goldenrod;">
+                +298 286032
+            </span>
+            <span style="color: goldenrod;">
+                FJOSID2023@GMAIL.COM
+            </span>
+            <span style="color: goldenrod;">
+                CVR: 369497 EAN: 5790002266621
+            </span>
+        </div>
+            
+        <div class="bottom__links">
+            <a style="color: goldenrod;" href="/">Fjósið</a>
+            <a target="_blank" style="color: goldenrod;" href="https://www.Theview.fo">The View</a>
+            <a target="_blank" style="color: goldenrod;" href="https://www.Bluegate.fo">Bluegate</a>
+        </div>
+        <div class="bottom__icons">
+            <a target="_blank" style="color: goldenrod;" href="https://www.facebook.com/profile.php?id=61551701065518"><i class="fa fa-facebook" style="font-size:36px"></i></a>
+            <a target="_blank" style="color: goldenrod;" href="https://www.instagram.com/fjosid2023/"><i class="fa fa-instagram" style="font-size:36px"></i></a>
+        </div>
+    </div>
 </div>
 
 @code {

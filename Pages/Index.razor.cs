@@ -1,7 +1,10 @@
-﻿using Microsoft.AspNetCore.Components;
+﻿using Microsoft.AspNetCore.Builder.Extensions;
+using Microsoft.AspNetCore.Components;
 using Microsoft.JSInterop;
 using MudBlazor;
+using System.Net.NetworkInformation;
 using System.Text.RegularExpressions;
+
 
 namespace Fjosid.Pages
 {
@@ -11,17 +14,25 @@ namespace Fjosid.Pages
         public int LanguageId { get; set; } = 1;
 
         [Inject] IJSRuntime JSRuntime { get; set; } = default!;
+        [Inject] NavigationManager NavigationManager { get; set; } = default!;
 
-        private bool arrows = true;
-        private bool bullets = true;
-        private bool enableSwipeGesture = true;
-        private bool autocycle = true;
-        private Transition transition = Transition.Fade;
-
-
-        private async Task ScrollToBooking()
+        protected override async Task OnAfterRenderAsync(bool firstRender)
         {
-            await JSRuntime.InvokeVoidAsync("scrollToBooking");
+            if (firstRender)
+            {
+                await JSRuntime.InvokeVoidAsync("initMap", null);
+                StateHasChanged();
+            }
+        }
+
+        private void NavToBooking()
+        {
+            NavigationManager.NavigateTo("/Booking");
+        }
+
+        private void NavToGallary()
+        {
+            NavigationManager.NavigateTo("/Gallary");
         }
     }
 }

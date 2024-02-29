@@ -51,8 +51,8 @@
                     Steeped in history and rustic charm, our restaurant embraces the heritage of its origins—a beautifully renovated barn that once stood as the heart of a bustling farm. We've meticulously preserved the barn's authentic character, from the weathered wooden beams to the original stone walls, creating a warm, inviting ambiance that transports you to a bygone era. Each corner of our dining space tells a story, adorned with vintage farm tools and photographs that chronicle the barn's transformation. As you dine with us, you're not just enjoying a meal; you're partaking in a rich legacy that celebrates the timeless beauty of rural life and the enduring spirit of the land.
                 </p>
                 <div class="details-section__button-wrapper">
-                    <MudButton @onclick="ScrollToBooking" ButtonType="ButtonType.Button" Variant="Variant.Filled" Color="Color.Success">
-                        Reserve Booking
+                    <MudButton @onclick="NavToGallary" ButtonType="ButtonType.Button" Variant="Variant.Filled" Color="Color.Success">
+                        Gallary
                     </MudButton>
                 </div>
             </div>
@@ -66,7 +66,7 @@
                     At the heart of our culinary philosophy lies a deep commitment to farm-to-table dining, where every dish begins with fresh, locally-sourced ingredients. Our menu is a celebration of the seasons, featuring an ever-changing array of flavors that highlight the best of what the local farms offer. From crisp, garden-picked vegetables to free-range meats and artisanal cheeses, each ingredient is carefully selected to ensure the highest quality and taste. Our chefs artfully blend tradition with innovation, crafting dishes that not only delight the palate but also tell the story of the land and the hands that nurtured it. Dining with us is more than a meal; it's an intimate journey through the local countryside's bountiful produce and a tribute to the community of farmers and artisans who bring their passion to your plate.
                 </p>
                 <div class="details-section__button-wrapper">
-                    <MudButton @onclick="ScrollToBooking" ButtonType="ButtonType.Button" Variant="Variant.Filled" Color="Color.Success">
+                    <MudButton @onclick="NavToBooking" ButtonType="ButtonType.Button" Variant="Variant.Filled" Color="Color.Success">
                         Reserve Booking
                     </MudButton>
                 </div>
@@ -96,7 +96,7 @@
     </div>
 </div>
 
-<div class="intro-section">
+<div class="section-to-animate intro-section">
     <div class="intro-section__text-wrapper">
         <h2 class="offers-title">
             About us
@@ -164,56 +164,9 @@
     </div>
 </div>
 
-<div class="section-to-animate">
-    <h2 style="font-weight: 600;font-size: 40px;line-height: 1.2;color: #333333;margin-bottom: 1.5rem;">Picture Gallary</h2>
-
-    <div style="margin-bottom:6rem;">
-        <MudCarousel Class="mud-width-full" Style="height:700px;" ShowArrows="@arrows" ShowBullets="@bullets" EnableSwipeGesture="@enableSwipeGesture" AutoCycle="@autocycle" TData="object">
-            <MudCarouselItem Transition="transition" Style="display:flex; justify-content:center;">
-                <div class="d-flex" style="height:100%;">
-                    <MudImage Src="images/høli_1.jpg"></MudImage>
-                </div>
-            </MudCarouselItem>
-            <MudCarouselItem Transition="transition" Style="display:flex; justify-content:center;">
-                <div class="d-flex" style="height:100%;">
-                    <MudImage Src="images/matur_1.jpg"></MudImage>
-                </div>
-            </MudCarouselItem>
-            <MudCarouselItem Transition="transition" Style="display:flex; justify-content:center;">
-                <div class="d-flex" style="height:100%;">
-                    <MudImage Src="images/eplir_1.jpg"></MudImage>
-                </div>
-            </MudCarouselItem>
-            <MudCarouselItem Transition="transition" Style="display:flex; justify-content:center;">
-                <div class="d-flex" style="height:100%;">
-                    <MudImage Src="images/høli_2.jpg"></MudImage>
-                </div>
-            </MudCarouselItem>
-            <MudCarouselItem Transition="transition" Style="display:flex; justify-content:center;">
-                <div class="d-flex" style="height:100%">
-                    <MudImage Src="images/eplir_2.jpg"></MudImage>
-                </div>
-            </MudCarouselItem>
-            <MudCarouselItem Transition="transition" Style="display:flex; justify-content:center;">
-                <div class="d-flex" style="height:100%">
-                    <MudImage Src="images/høli_3.jpg"></MudImage>
-                </div>
-            </MudCarouselItem>
-            <MudCarouselItem Transition="transition" Style="display:flex; justify-content:center;">
-                <div class="d-flex" style="height:100%;">
-                    <MudImage Src="images/uttanfyri_1.jpg"></MudImage>
-                </div>
-            </MudCarouselItem>
-            <MudCarouselItem Transition="transition" Style="display:flex; justify-content:center;">
-                <div class="d-flex" style="height:100%">
-                    <MudImage Src="images/uttanfyri_2.jpg"></MudImage>
-                </div>
-            </MudCarouselItem>
-            <MudCarouselItem Transition="transition" Style="display:flex; justify-content:center;">
-                <div class="d-flex" style="height:100%">
-                    <MudImage Src="images/vesi_1.jpg"></MudImage>
-                </div>
-            </MudCarouselItem>
-        </MudCarousel>
-    </div>
+<div class="section-to-animate map">
+    <h2 class="offers-title">
+        Location
+    </h2>
+    <div id="map" style="height:500px;width:100%;" />
 </div>

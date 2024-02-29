@@ -16,6 +16,8 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
     <link href="_content/MudBlazor/MudBlazor.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAreGb5oJR-uUThKERZWsNS1tKuz2erJaI&v=3"></script>
+
     <component type="typeof(HeadOutlet)" render-mode="ServerPrerendered" />
 </head>
 <body>
@@ -53,5 +55,47 @@
 
         window.addEventListener('scroll', checkScrollAndAnimate);
     </script>
+
+    @* <script>
+        function initMap() {
+            var latlng = new google.maps.LatLng(62.086239, -7.371621);
+            var options = {
+                zoom: 14, center: latlng,
+                mapTypeId: google.maps.MapTypeId.ROADMAP
+            };
+            var map = new google.maps.Map(document.getElementById("map"), options);
+    </script> *@
+
+    <script>
+
+        function initMap() {
+            var _documentStyles = getComputedStyle(document.documentElement);
+            var _currentBp = _documentStyles.getPropertyValue('--current-bp');
+            var mapStyles = [{ "featureType": "administrative", "elementType": "all", "stylers": [{ "saturation": "-100" }] }, { "featureType": "administrative.province", "elementType": "all", "stylers": [{ "visibility": "off" }] }, { "featureType": "landscape", "elementType": "all", "stylers": [{ "saturation": -100 }, { "lightness": 65 }, { "visibility": "on" }] }, { "featureType": "poi", "elementType": "geometry", "stylers": [{ "hue": "#ffff00" }, { "lightness": -25 }, { "saturation": -97 }] }, { "featureType": "poi", "elementType": "geometry.fill", "stylers": [{ "hue": "#ffff00" }, { "lightness": -25 }, { "saturation": -97 }] }, { "featureType": "poi", "elementType": "geometry.stroke", "stylers": [{ "hue": "#ffff00" }, { "lightness": -25 }, { "saturation": -97 }] }, { "featureType": "poi", "elementType": "labels", "stylers": [{ "visibility": "off" }] }, { "featureType": "poi", "elementType": "labels.text", "stylers": [{ "visibility": "off" }] }, { "featureType": "poi", "elementType": "labels.text.fill", "stylers": [{ "visibility": "off" }] }, { "featureType": "poi", "elementType": "labels.text.stroke", "stylers": [{ "visibility": "off" }] }, { "featureType": "poi", "elementType": "labels.icon", "stylers": [{ "visibility": "off" }] }, { "featureType": "road", "elementType": "all", "stylers": [{ "saturation": "-100" }] }, { "featureType": "road.highway", "elementType": "all", "stylers": [{ "visibility": "simplified" }] }, { "featureType": "road.arterial", "elementType": "all", "stylers": [{ "lightness": "30" }] }, { "featureType": "road.local", "elementType": "all", "stylers": [{ "lightness": "40" }] }, { "featureType": "transit", "elementType": "all", "stylers": [{ "saturation": -100 }, { "visibility": "simplified" }] }, { "featureType": "water", "elementType": "geometry", "stylers": [{ "hue": "#ffff00" }, { "lightness": -25 }, { "saturation": -97 }] }, { "featureType": "water", "elementType": "labels", "stylers": [{ "visibility": "off" }] }];
+
+            var zoomLevel = 16;
+
+            if (_currentBp == 'xs' || _currentBp == 'sm') {
+                zoomLevel = 15;
+            }
+
+            var map = new google.maps.Map(document.getElementById('map'), {
+                zoom: zoomLevel,
+                center: { lat: 62.086239, lng: -7.371621 },
+                mapTypeId: 'roadmap',
+                disableDefaultUI: true,
+                draggable: true,
+                scrollwheel: false,
+                zoomControl: true,
+                styles: mapStyles
+            });
+
+            var marker = new google.maps.Marker({
+                position: { lat: 62.086239, lng: -7.371621 },
+                map: map,
+            });
+        }
+    </script>
+    
 </body>
 </html>
