@@ -50,6 +50,9 @@ namespace Fjosid.Pages
             "40 Guests",
         };
 
+        private List<DateTime> _dates = new List<DateTime>();
+        private const string FILENAME = "dates.txt";
+
         private DateTime? _date { get; set; } = DateTime.Now;
         private string _numOfGuests { get; set; }
         private string _firstName { get; set; } = string.Empty;
@@ -57,6 +60,35 @@ namespace Fjosid.Pages
         private string _email { get; set; } = string.Empty;
         private string _phonenumber { get; set; } = string.Empty;
         private string _message { get; set; } = string.Empty;
+
+
+        private bool IsDateDisabledFunc(DateTime element) => _dates.Any(d => d.Date == element.Date);
+
+        protected override async Task OnInitializedAsync()
+        {
+            LoadData();
+            await base.OnInitializedAsync();
+        }
+
+        private void LoadData()
+        {
+            ValidateFile();
+
+            _dates.Clear();
+            foreach (string line in File.ReadLines(FILENAME))
+            {
+                _dates.Add(DateTime.Parse(line));
+            }
+        }
+
+        private void ValidateFile()
+        {
+            bool fileExists = File.Exists(FILENAME);
+            if (fileExists == false)
+            {
+                using (File.Create(FILENAME)) { }
+            }
+        }
 
         private IEnumerable<string> NumberOfGuests(string text)
         {
@@ -78,10 +110,16 @@ namespace Fjosid.Pages
                 yield return "Number of guests must be 40 or lower";
         }
 
-        private void SendEmail()
+        private void SendEmails()
         {
-            var fromAddress = new MailAddress("og1806x9@gmail.com", "Ørvur");
-            var toAddress = new MailAddress("orvur.gutt@gmail.com", "Ørvur");
+            SendEmail("orvur.gutt@gmail.com");
+            SendEmail("fjosid2023@gmail.com");
+        }
+
+        private void SendEmail(string to)
+        {
+            var fromAddress = new MailAddress("og1806x9@gmail.com", "Fjósið");
+            var toAddress = new MailAddress(to, "Fjósið");
             string fromPassword = s;
             string subject = "Frá Fjósið.fo";
             string body = $"""

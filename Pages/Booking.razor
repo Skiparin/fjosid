@@ -20,7 +20,8 @@
                                         DisableToolbar="true"
                                         Editable="true"
                                         PickerVariant="PickerVariant.Dialog"
-                                        @bind-Date="_date" />
+                                        @bind-Date="_date"
+                                        IsDateDisabledFunc="new Func<DateTime,bool>(IsDateDisabledFunc)" />
                                 </div>
                                 <div style="width: 100%;">
                                     <MudSelect @bind-Value="_numOfGuests"
@@ -91,7 +92,7 @@
             </div>
             <div class="booking-section__info-button-wrapper">
                 <div class="booking-section__info-button-wrapper-two">
-                    <MudButton Disabled="@(!success)" OnClick="@SendEmail" ButtonType="ButtonType.Button" Variant="Variant.Filled" Color="Color.Success">
+                    <MudButton Disabled="@(!success)" OnClick="@SendEmails" ButtonType="ButtonType.Button" Variant="Variant.Filled" Color="Color.Success">
                         Reserve Booking
                     </MudButton>
                 </div>

@@ -337,6 +337,10 @@ a, .btn-link {
     animation: slideUp 1s ease forwards;
 }
 
+.admin-content{
+    padding: 3rem;
+}
+
 @media only screen and (max-width: 768px) {
     /* For mobile phones: */
     .top-nav-menu {
@@ -444,6 +448,10 @@ a, .btn-link {
 
     .bottom__icons {
         margin-bottom: 80px;
+    }
+
+    .admin-content {
+        padding: 0rem;
     }
 }
 

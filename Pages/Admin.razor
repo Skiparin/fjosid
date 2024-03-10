@@ -1,0 +1,37 @@
+﻿@page "/Admin"
+
+<div class="admin-content"> 
+    <h2>Admin</h2>
+    <div style="display:flex; gap: 16px; margin-bottom: 16px;">
+        <MudDatePicker MinDate="DateTime.Now.AddDays(-1)"
+                       Label="Date"
+                       Style="margin-bottom:8px;"
+                       DisableToolbar="true"
+                       Editable="true"
+                       PickerVariant="PickerVariant.Dialog"
+                       @bind-Date="_date"
+                       IsDateDisabledFunc="new Func<DateTime,bool>(IsDateDisabledFunc)" />
+        <MudButton OnClick="AddDateClick">
+            Add Date
+        </MudButton>
+    </div>
+    
+
+    <MudTable  Items="@_dates" Dense="true" Hover="true" Bordered="false" Striped="false" Filter="new Func<DateTime,bool>(FilterFunc1)">
+        <ToolBarContent>
+            <MudText>Dates to filter out of the date picker</MudText>
+            <MudSpacer />
+            <MudTextField @bind-Value="searchString1" Placeholder="Search" Adornment="Adornment.Start" AdornmentIcon="@Icons.Material.Filled.Search" IconSize="Size.Medium" Class="mt-0"></MudTextField>
+        </ToolBarContent>
+        <HeaderContent>
+            <MudTh>Dates</MudTh>
+        </HeaderContent>
+        <RowTemplate>
+            <MudTd>@context.ToShortDateString()</MudTd>
+            <MudTd Style="justify-content: end; display: flex;"><MudIconButton OnClick="@(() => RemoveDateClick(@context))" Icon="@Icons.Material.Filled.Delete" aria-label="delete"></MudIconButton></MudTd>
+        </RowTemplate>
+        <PagerContent>
+            <MudTablePager HideRowsPerPage="true" />
+        </PagerContent>
+    </MudTable>
+</div>
