@@ -12,10 +12,10 @@
                 Fjósið
             </h2>
             <p class="intro-section__text">
-                At the heart of our culinary philosophy lies a deep commitment to farm-to-table dining, where every dish begins with fresh, locally-sourced ingredients. Our menu is a celebration of the seasons, featuring an ever-changing array of flavors that highlight the best of what the local farms offer. From crisp, garden-picked vegetables to free-range meats and artisanal cheeses, each ingredient is carefully selected to ensure the highest quality and taste. Our chefs artfully blend tradition with innovation, crafting dishes that not only delight the palate but also tell the story of the land and the hands that nurtured it. Dining with us is more than a meal; it's an intimate journey through the local countryside's bountiful produce and a tribute to the community of farmers and artisans who bring their passion to your plate.
+                @_intro
             </p>
             <p class="intro-section__text">
-                At the heart of our culinary philosophy lies a deep commitment to farm-to-table dining, where every dish begins with fresh, locally-sourced ingredients. Our menu is a celebration of the seasons, featuring an ever-changing array of flavors that highlight the best of what the local farms offer. From crisp, garden-picked vegetables to free-range meats and artisanal cheeses, each ingredient is carefully selected to ensure the highest quality and taste. Our chefs artfully blend tradition with innovation, crafting dishes that not only delight the palate but also tell the story of the land and the hands that nurtured it. Dining with us is more than a meal; it's an intimate journey through the local countryside's bountiful produce and a tribute to the community of farmers and artisans who bring their passion to your plate.
+                @_intro_2
             </p>
         </div>
         <div class="intro-section__image-wrapper">
@@ -48,10 +48,10 @@
                     Rustic Ambiance and Heritage
                 </h2>
                 <p class="details-section__text">
-                    Steeped in history and rustic charm, our restaurant embraces the heritage of its origins—a beautifully renovated barn that once stood as the heart of a bustling farm. We've meticulously preserved the barn's authentic character, from the weathered wooden beams to the original stone walls, creating a warm, inviting ambiance that transports you to a bygone era. Each corner of our dining space tells a story, adorned with vintage farm tools and photographs that chronicle the barn's transformation. As you dine with us, you're not just enjoying a meal; you're partaking in a rich legacy that celebrates the timeless beauty of rural life and the enduring spirit of the land.
+                    @_details
                 </p>
                 <div class="details-section__button-wrapper">
-                    <MudButton @onclick="NavToGallery" ButtonType="ButtonType.Button" Variant="Variant.Filled" Color="Color.Success">
+                    <MudButton Style="background: rgba(0, 0, 0, 1); color: goldenrod;" @onclick="NavToGallery" ButtonType="ButtonType.Button" Variant="Variant.Filled">
                         Gallery
                     </MudButton>
                 </div>
@@ -66,7 +66,7 @@
                     At the heart of our culinary philosophy lies a deep commitment to farm-to-table dining, where every dish begins with fresh, locally-sourced ingredients. Our menu is a celebration of the seasons, featuring an ever-changing array of flavors that highlight the best of what the local farms offer. From crisp, garden-picked vegetables to free-range meats and artisanal cheeses, each ingredient is carefully selected to ensure the highest quality and taste. Our chefs artfully blend tradition with innovation, crafting dishes that not only delight the palate but also tell the story of the land and the hands that nurtured it. Dining with us is more than a meal; it's an intimate journey through the local countryside's bountiful produce and a tribute to the community of farmers and artisans who bring their passion to your plate.
                 </p>
                 <div class="details-section__button-wrapper">
-                    <MudButton @onclick="NavToBooking" ButtonType="ButtonType.Button" Variant="Variant.Filled" Color="Color.Success">
+                    <MudButton Style="background: rgba(0, 0, 0, 1); color: goldenrod;" @onclick="NavToBooking" ButtonType="ButtonType.Button" Variant="Variant.Filled">
                         Booking
                     </MudButton>
                 </div>
@@ -87,8 +87,8 @@
                     Our restaurant proudly stands as a beacon of sustainability and community spirit. We're committed to eco-friendly practices, from sourcing ingredients from local farms to minimizing our environmental footprint in every aspect of operation. We believe in giving back to the land that feeds us, engaging in sustainable agriculture and energy-efficient initiatives. Beyond our kitchen, we foster a strong sense of community by supporting local artisans, hosting events that celebrate local culture, and participating in initiatives that enrich our neighborhood. Each meal served not only brings delight to your taste buds but also contributes to a greater cause—nurturing a sustainable future and strengthening the bonds within our community.
                 </p>
                 <div class="details-section__button-wrapper">
-                    <MudButton ButtonType="ButtonType.Button" Variant="Variant.Filled" Color="Color.Success">
-                        <a href="images/Menu.pdf" target="_blank" style="color: rgba(255,255,255,1);">See Menu</a>
+                    <MudButton Style="background: rgba(0, 0, 0, 1);" ButtonType="ButtonType.Button" Variant="Variant.Filled">
+                        <a href="images/Menu.pdf" target="_blank" style="color: goldenrod;">Menu</a>
                     </MudButton>
                 </div>
             </div>
@@ -170,3 +170,7 @@
     </h2>
     <div id="map" style="height:500px;width:100%;" />
 </div>
+
+<MudScrollToTop>
+    <MudFab Color="Color.Tertiary" StartIcon="@Icons.Material.Filled.ArrowCircleUp" />
+</MudScrollToTop>

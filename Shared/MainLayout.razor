@@ -12,23 +12,36 @@
             <a href="/">
                 <img src="images/fjosid_icon_row.png" alt="Icon" />
             </a>
-            <nav>
+            <nav class="top-nav-menu">
                 <ul>
-                    @* <li><a style="color: goldenrod;" href="/">Home</a></li> *@
+                    <li><a style="color: goldenrod;" href="/">Home</a></li>
+                    <li><a style="color: goldenrod;" href="images/Menu.pdf" target="_blank">Menu</a></li>
                     <li><a style="color: goldenrod;" href="/Booking">Booking</a></li>
                     <li><a style="color: goldenrod;" href="/Gallery">Gallery</a></li>
                 </ul>
             </nav>
         </div>
         
-        <div style="margin-right: 16px; gap: 24px; display: flex; align-items: center;">
-            <a target="_blank" style="color: goldenrod;" href="https://www.facebook.com/profile.php?id=61551701065518"><i class="fa fa-facebook" style="font-size:24px"></i></a>
-            <a target="_blank" style="color: goldenrod;" href="https://www.instagram.com/fjosid2023/"><i class="fa fa-instagram" style="font-size:24px"></i></a>
+        <div class="top-bar-links-wrapper">
+            <a class="social-media-link" target="_blank" style="color: goldenrod;" href="https://www.facebook.com/profile.php?id=61551701065518"><i class="fa fa-facebook" style="font-size:24px"></i></a>
+            <a class="social-media-link" target="_blank" style="color: goldenrod;" href="https://www.instagram.com/fjosid2023/"><i class="fa fa-instagram" style="font-size:24px"></i></a>
 
             <MudToggleGroup T="int" Dense="true" SelectionMode="SelectionMode.ToggleSelection" @bind-Value="LanguageId">
                 <MudToggleItem T="int" Value="1" Text="FO" />
                 <MudToggleItem T="int" Value="2" Text="EN" />
             </MudToggleGroup>
+
+            <MudMenu
+                     Icon="@Icons.Material.Outlined.Menu"
+                     Color="Color.Inherit"
+                     IconColor="Color.Secondary"
+                     AnchorOrigin="@Origin.BottomCenter"
+                     TransformOrigin="@Origin.TopRight">
+                <MudMenuItem><a style="color: goldenrod;" href="/">Home</a></MudMenuItem>
+                <MudMenuItem><a style="color: goldenrod;" href="images/Menu.pdf" target="_blank">Menu</a></MudMenuItem>
+                <MudMenuItem><a style="color: goldenrod;" href="/Booking">Booking</a></MudMenuItem>
+                <MudMenuItem><a style="color: goldenrod;" href="/Gallery">Gallery</a></MudMenuItem>
+            </MudMenu>
         </div>
     </div>
 
@@ -66,7 +79,7 @@
                 FJOSID2023@GMAIL.COM
             </span>
             <span style="color: goldenrod;">
-                CVR: 369497 EAN: 5790002266621
+                CVR: 664855
             </span>
         </div>
             

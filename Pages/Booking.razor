@@ -3,7 +3,7 @@
 @using System.ComponentModel.DataAnnotations
 
 <div style="display: flex; justify-content: center; background: #f7f7f7;">
-    <div id="booking" style="width: 50%; align-items: center; display: flex; flex-direction: column; background: white; padding: 32px;">
+    <div id="booking" class="booking-section-wrapper">
         <h2 class="booking-section__title">Booking</h2>
 
         <div class="booking-section">
@@ -11,12 +11,13 @@
                 <div class="booking-section__info-wrapper-two">
                     <div style="width: 100%;">
                         <MudForm @ref="form" @bind-IsValid="@success" @bind-Errors="@errors">
-                            <div style="display: flex; gap: 32px">
+                            <div class="booking-section__info-item-wrapper">
                                 <div style="width: 100%;">
-                                    <MudDatePicker PickerVariant="PickerVariant.Inline" Date="@(DateTime.Today.AddDays(1))" />
+                                    <MudDatePicker Label="Date" Style="margin-bottom:8px;" DisableToolbar="true" Editable="true" PickerVariant="PickerVariant.Dialog" @bind-Date="_date" />
                                 </div>
                                 <div style="width: 100%;">
-                                    <MudTextField Style="margin-bottom:8px;"
+                                    <MudTextField @bind-Value="@_numOfGuests"
+                                                  Style="margin-bottom:8px;"
                                                   FullWidth="true"
                                                   T="string"
                                                   Label="Number of guests"
@@ -25,9 +26,10 @@
                                                   Validation="@(new Func<string, IEnumerable<string>>(NumberOfGuests))" />
                                 </div>
                             </div>
-                            <div style="display: flex; gap: 32px">
+                            <div class="booking-section__info-item-wrapper">
                                 <div style="width: 100%;">
-                                    <MudTextField Style="margin-bottom:8px;"
+                                    <MudTextField @bind-Value="@_firstName"
+                                                  Style="margin-bottom:8px;"
                                                   FullWidth="true"
                                                   T="string"
                                                   Label="First name"
@@ -35,7 +37,8 @@
                                                   RequiredError="First name is required" />
                                 </div>
                                 <div style="width: 100%;">
-                                    <MudTextField Style="margin-bottom:8px;"
+                                    <MudTextField @bind-Value="@_lastName"
+                                                  Style="margin-bottom:8px;"
                                                   FullWidth="true"
                                                   T="string"
                                                   Label="Last name"
@@ -43,9 +46,10 @@
                                                   RequiredError="Last name is required" />
                                 </div>
                             </div>
-                            <div style="display: flex; gap: 32px">
+                            <div class="booking-section__info-item-wrapper">
                                 <div style="width: 100%;">
-                                    <MudTextField Style="margin-bottom:8px;"
+                                    <MudTextField @bind-Value="@_email"
+                                                  Style="margin-bottom:8px;"
                                                   FullWidth="true"
                                                   T="string"
                                                   Label="Email"
@@ -54,12 +58,13 @@
                                                   Validation="@(new EmailAddressAttribute() {ErrorMessage = "The email address is invalid"})" />
                                 </div>
                                 <div style="width: 100%;">
-                                    <MudTextField Style="margin-bottom:8px;"
+                                    <MudTextField @bind-Value="@_phonenumber"
+                                                  Style="margin-bottom:8px;"
                                                   FullWidth="true"
                                                   T="string"
-                                                  Label="Phonenumber"
+                                                  Label="Phone number"
                                                   Required="true"
-                                                  RequiredError="Phonenumber is required"
+                                                  RequiredError="Phone number is required"
                                                   Validation="@(new PhoneAttribute() {ErrorMessage = "The phonenumber is invalid"})" />
                                 </div>
                             </div>
@@ -69,12 +74,12 @@
             </div>
             <div class="booking-section__info-text-field-wrapper">
                 <div style="width: 100%;">
-                    <MudTextField T="string" Label="Message" Variant="Variant.Outlined" Lines="5" />
+                    <MudTextField @bind-Value="@_message" T="string" Label="Message" Variant="Variant.Outlined" Lines="5" />
                 </div>
             </div>
             <div class="booking-section__info-button-wrapper">
                 <div class="booking-section__info-button-wrapper-two">
-                    <MudButton ButtonType="ButtonType.Button" Variant="Variant.Filled" Color="Color.Success">
+                    <MudButton OnClick="@SendEmail" ButtonType="ButtonType.Button" Variant="Variant.Filled" Color="Color.Success">
                         Reserve Booking
                     </MudButton>
                 </div>
