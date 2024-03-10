@@ -13,8 +13,45 @@ namespace Fjosid.Pages
         MudForm form;
         string s = "rjvk ssby ukka ollc";
 
+        private List<string> numberOfGuestsList = new List<string>()
+        {
+            "8 Guests",
+            "9 Guests",
+            "10 Guests",
+            "11 Guests",
+            "12 Guests",
+            "13 Guests",
+            "14 Guests",
+            "15 Guests",
+            "16 Guests",
+            "17 Guests",
+            "18 Guests",
+            "19 Guests",
+            "20 Guests",
+            "21 Guests",
+            "22 Guests",
+            "23 Guests",
+            "24 Guests",
+            "25 Guests",
+            "26 Guests",
+            "27 Guests",
+            "28 Guests",
+            "29 Guests",
+            "30 Guests",
+            "31 Guests",
+            "32 Guests",
+            "33 Guests",
+            "34 Guests",
+            "35 Guests",
+            "36 Guests",
+            "37 Guests",
+            "38 Guests",
+            "39 Guests",
+            "40 Guests",
+        };
+
         private DateTime? _date { get; set; } = DateTime.Now;
-        private string _numOfGuests { get; set; } = "8";
+        private string _numOfGuests { get; set; }
         private string _firstName { get; set; } = string.Empty;
         private string _lastName { get; set; } = string.Empty;
         private string _email { get; set; } = string.Empty;
@@ -30,7 +67,7 @@ namespace Fjosid.Pages
             }
 
             int num = 0;
-            if (Int32.TryParse(text, out num) == false)
+            if (Int32.TryParse(text.Split(" ")[0], out num) == false)
             {
                 yield return "Number of guests must be a number";
             }

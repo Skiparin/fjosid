@@ -13,17 +13,29 @@
                         <MudForm @ref="form" @bind-IsValid="@success" @bind-Errors="@errors">
                             <div class="booking-section__info-item-wrapper">
                                 <div style="width: 100%;">
-                                    <MudDatePicker Label="Date" Style="margin-bottom:8px;" DisableToolbar="true" Editable="true" PickerVariant="PickerVariant.Dialog" @bind-Date="_date" />
+                                    <MudDatePicker
+                                        MinDate="DateTime.Now.AddDays(-1)"
+                                        Label="Date"
+                                        Style="margin-bottom:8px;"
+                                        DisableToolbar="true"
+                                        Editable="true"
+                                        PickerVariant="PickerVariant.Dialog"
+                                        @bind-Date="_date" />
                                 </div>
                                 <div style="width: 100%;">
-                                    <MudTextField @bind-Value="@_numOfGuests"
-                                                  Style="margin-bottom:8px;"
-                                                  FullWidth="true"
-                                                  T="string"
-                                                  Label="Number of guests"
-                                                  Required="true"
-                                                  RequiredError="Number of guests is required"
-                                                  Validation="@(new Func<string, IEnumerable<string>>(NumberOfGuests))" />
+                                    <MudSelect @bind-Value="_numOfGuests"
+                                               Placeholder="Number of Guests"
+                                               Style="margin-bottom:8px;"
+                                               FullWidth="true"
+                                               T="string"
+                                               Required="true"
+                                               RequiredError="Number of guests is required"
+                                               Validation="@(new Func<string, IEnumerable<string>>(NumberOfGuests))">
+                                        @foreach (string item in numberOfGuestsList)
+                                        {
+                                            <MudSelectItem Value="@item">@item</MudSelectItem>
+                                        }
+                                    </MudSelect>
                                 </div>
                             </div>
                             <div class="booking-section__info-item-wrapper">
@@ -79,7 +91,7 @@
             </div>
             <div class="booking-section__info-button-wrapper">
                 <div class="booking-section__info-button-wrapper-two">
-                    <MudButton OnClick="@SendEmail" ButtonType="ButtonType.Button" Variant="Variant.Filled" Color="Color.Success">
+                    <MudButton Disabled="@(!success)" OnClick="@SendEmail" ButtonType="ButtonType.Button" Variant="Variant.Filled" Color="Color.Success">
                         Reserve Booking
                     </MudButton>
                 </div>
