@@ -2,6 +2,8 @@
 using System.Net.Mail;
 using System.Net;
 using System.Text.RegularExpressions;
+using static MudBlazor.Defaults.Classes;
+using static MudBlazor.CategoryTypes;
 
 namespace Fjosid.Pages
 {
@@ -114,6 +116,27 @@ namespace Fjosid.Pages
         {
             SendEmail("orvur.gutt@gmail.com");
             SendEmail("fjosid2023@gmail.com");
+            ResetInput();
+            OpenSnackBar();
+        }
+
+        private void ResetInput()
+        {
+            success = false;
+            _date = DateTime.Now;
+            _numOfGuests = string.Empty;
+            _firstName = string.Empty;
+            _lastName = string.Empty;
+            _email = string.Empty;
+            _phonenumber = string.Empty;
+            _message = string.Empty;
+            form.Reset();
+        }
+
+        private void OpenSnackBar()
+        {
+            Snackbar.Configuration.PositionClass = Defaults.Classes.Position.BottomCenter;
+            Snackbar.Add("Thanks for your reservation. We will contact you as soon as possible.", Severity.Normal);
         }
 
         private void SendEmail(string to)
@@ -147,7 +170,7 @@ Boð: {_message}
                 Body = body
             })
             {
-                smtp.Send(message);
+                //smtp.Send(message);
             }
         }
     }
