@@ -3,9 +3,9 @@
 @using System.ComponentModel.DataAnnotations
 
 
-<PageTitle>Index</PageTitle>
+<PageTitle>Fjósið</PageTitle>
 
-<div>
+<div style="margin-bottom: 6rem;">
     <div class="intro-section">
         <div class="intro-section__text-wrapper">
             <h2 class="intro-section__title">
@@ -96,45 +96,6 @@
     </div>
 </div>
 
-<div class="section-to-animate intro-section">
-    <div class="intro-section__text-wrapper">
-        <h2 class="offers-title">
-            About us
-        </h2>
-        <p class="intro-section__text">
-        Heri is the farmer and the one who came up with the idea of making part of the barn into a
-        restaurant/venue. Jenny is the wife, boss, chef and cleaner ;-)
-        Ellef and Eystein are the owners of bluegate.fo, which is a company with 3 fast boats, that they use for
-        sightseeing. Each boat has the capacity of 12 persons and one of the ideas with this barn, was the
-        possibility to sail and eat in one booking.
-        Tróndur has 4 cosy cottages made in a traditional way with grass roof, stones and are painted black. The
-        company is called The view because of the outstanding view in the village of Bøur. There is also
-        possibility to stay at The view and eat at Fjósið, but you need to be min. 8 pers.
-        Eyðfinn is Heri´s cousin and a constructor. Poula, his wife also cooks and cleans in Fjósið.
-        Tórður is Eyðfinn and Poula´s son and will soon finish as a constructor. He was in charge of renovating
-        the barn loft into ”Fjósið”.
-        </p>
-    </div>
-    <div class="intro-section__image-wrapper">
-        <div class="intro-section__two-image-wrapper">
-            <div>
-                <MudImage class="intro-section__image" ObjectFit=ObjectFit.Cover Src="images/høli_1.jpg"></MudImage>
-            </div>
-            <div>
-                <MudImage class="intro-section__image" ObjectFit=ObjectFit.Cover Src="images/matur_17.jpg"></MudImage>
-            </div>
-        </div>
-        <div class="intro-section__two-image-wrapper">
-            <div>
-                <MudImage class="intro-section__image" ObjectFit=ObjectFit.Cover Src="images/høli_11.jpg"></MudImage>
-            </div>
-            <div>
-                <MudImage class="intro-section__image" ObjectFit=ObjectFit.Cover Src="images/matur_2.jpg"></MudImage>
-            </div>
-        </div>
-    </div>
-</div>
-
 <div class="section-to-animate offers-section">
     <div class="offers-section-wrapper">
         <h2 class="offers-title">
@@ -154,7 +115,7 @@
                     Meetings and Events
                 </h4>
             </div>
-            <div class="offers-section__offer-section">            
+            <div class="offers-section__offer-section">
                 <MudImage class="offers-section__offer-image" ObjectFit=ObjectFit.Cover Src="images/matur_14.jpg"></MudImage>
                 <h4 class="offers-section__offer-title">
                     Rent Fjósið as a Venue
@@ -163,6 +124,59 @@
         </div>
     </div>
 </div>
+
+
+
+<div class="section-to-animate" style="display: grid; margin-bottom: 6rem;">
+    <div style="display: grid;">
+        <h2 class="about-us-title" style="justify-self: center;">
+            About us
+        </h2>
+    </div>
+    <div style="display: flex; justify-content: center;">
+        <div class="about-us-section__image-wrapper">
+            <div class="about-us-section__two-image-wrapper">
+                <div style="width: 50%;">
+                    <MudImage class="about-us-section__image" ObjectFit=ObjectFit.Cover Src="images/jenny_heri.jpg"></MudImage>
+                    <p class="intro-section__text">
+                        Heri is the farmer and the one who came up with the idea of making part of the barn into a
+                        restaurant/venue. Jenny is the wife, boss, chef and cleaner.
+                    </p>
+                </div>
+                <div style="width: 50%;">
+                    <MudImage class="about-us-section__image" ObjectFit=ObjectFit.Cover Src="images/ellef_eystein.jpg"></MudImage>
+                    <p class="intro-section__text">
+                        Our friends Eystein and Ellef, who run Bluegate.fo, add a bit of adventure to our experience. They offer sightseeing tours on their fast boats, making it easy for our guests to enjoy a day on the water and a meal in our barn.
+                    </p>
+                </div>
+            </div>
+            <div class="about-us-section__two-image-wrapper">
+                <div style="width: 50%;">
+                    <MudImage class="about-us-section__image" ObjectFit=ObjectFit.Cover Src="images/eyðfinn_poula.jpg"></MudImage>
+                    <p class="intro-section__text">
+                        Eyðfinn, Heri's cousin, helped turn the barn into what Fjósið is today. Together with his wife Poula, they’re a big part of our day-to-day life here, helping in the kitchen and keeping the place running smoothly.
+                    </p>
+
+                </div>
+                <div style="width: 50%;">
+                    <MudImage class="about-us-section__image" ObjectFit=ObjectFit.Cover Src="images/tórður.jpg"></MudImage>
+                    <p class="intro-section__text">
+                        Tórður, Eyðfinn and Poula's son, is about to become a constructor. He’s been involved in making Fjósið a reality and represents the next generation of our community, blending old traditions with new ideas.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    
+    @* <p class="intro-section__text">
+        Tróndur offers charming cottages in Bøur, named 'The View' for their breathtaking scenery. Guests at The View can enjoy a stay in these traditional cottages and come over to Fjósið for a meal, perfect for groups and families.
+    </p> *@
+
+    
+
+
+
 
 <div class="section-to-animate map">
     <h2 class="offers-title">
