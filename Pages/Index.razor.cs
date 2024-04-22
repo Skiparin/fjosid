@@ -11,7 +11,7 @@ namespace Fjosid.Pages
     public partial class Index
     {
         [CascadingParameter]
-        public int LanguageId { get; set; } = 1;
+        public int LanguageId { get; set; } = 2;
 
         private string _intro
         {
@@ -78,6 +78,11 @@ namespace Fjosid.Pages
         private void NavToGallery()
         {
             NavigationManager.NavigateTo("/Gallery");
+        }
+
+        private void NavToMeetings()
+        {
+            NavigationManager.NavigateTo("/Meetings");
         }
     }
 }

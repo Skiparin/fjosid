@@ -1,0 +1,66 @@
+﻿@page "/Meetings"
+
+<PageTitle>Meetings and Events</PageTitle>
+
+<div>
+    <div class="intro-section">
+        <div class="intro-section__text-wrapper">
+            <h2 class="intro-section__title">
+                Meetings and Events
+            </h2>
+            <p class="intro-section__text">
+                @_text
+            </p>
+        </div>
+        <div class="intro-section__image-wrapper">
+            <MudImage class="details-section__image" ObjectFit=ObjectFit.Cover Src="images/luttakarar_13.jpg"></MudImage>
+        </div>
+    </div>
+
+    <div class="details-section">
+        <div class="details-section__text-image-section">
+            <div class="details-section__image-wrapper">
+                <MudImage class="details-section__image" ObjectFit=ObjectFit.Cover Src="images/luttakarar_12.jpg"></MudImage>
+            </div>
+            <div class="details-section__text-wrapper">
+                <h2 class="details-section__title">
+                    Meeting Venue Rental Options
+                </h2>
+                <p class="details-section__text">
+                    @_text_2
+                </p>
+            </div>
+        </div>
+        <div class="section-to-animate details-section__text-image-section-2" style="background-color: #FFFFFF;">
+            <div class="details-section__text-wrapper">
+                <h2 class="details-section__title">
+                    Amenities and Services
+                </h2>
+                <p class="details-section__text">
+                    @_text_3
+                </p>
+            </div>
+            <div class="details-section__image-wrapper">
+                <MudImage class="details-section__image" ObjectFit=ObjectFit.Cover Src="images/luttakarar_7.jpg"></MudImage>
+            </div>
+        </div>
+        <div class="section-to-animate details-section__text-image-section">
+            <div class="details-section__image-wrapper">
+                <MudImage class="details-section__image" ObjectFit=ObjectFit.Cover Src="images/luttakarar_6.jpg"></MudImage>
+            </div>
+            <div class="details-section__text-wrapper">
+                <h2 class="details-section__title">
+                    Booking and Reservation
+                </h2>
+                <p class="details-section__text">
+                    @_text_4
+                </p>
+                <div class="details-section__button-wrapper">
+                    <MudButton Style="background: rgba(0, 0, 0, 1); color: goldenrod;" @onclick="NavToBooking" ButtonType="ButtonType.Button" Variant="Variant.Filled">
+                        Booking
+                    </MudButton>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
