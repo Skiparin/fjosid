@@ -2,7 +2,7 @@
 
 namespace Fjosid.Pages
 {
-    public partial class Meetings
+    public partial class RentAsVenue
     {
         [CascadingParameter]
         public int LanguageId { get; set; } = 2;
@@ -15,7 +15,7 @@ namespace Fjosid.Pages
             {
                 if (LanguageId == 2)
                 {
-                    return "Welcome to Fjósið, where we offer a versatile venue that seamlessly transitions from a cozy restaurant atmosphere to a dynamic event space. Nestled in Bøur, Fjósið caters to various occasions, from intimate gatherings to corporate meetings. Our venue rental service provides the perfect backdrop for your event, whether it's a professional seminar or a personal celebration. With state-of-the-art amenities and a warm ambiance, Fjósið ensures an unforgettable experience for you and your guests.";
+                    return "Welcome to Fjósið - your versatile venue for unforgettable gatherings! Whether you're planning a birthday bash, a baptism celebration, or any other special event, Fjósið is here to make your occasion truly memorable. Nestled in the heart of Bøur, our venue offers a unique blend of rustic charm and modern amenities, perfect for creating unforgettable moments with your loved ones. Discover the possibilities that await you at Fjósið!";
                 }
                 else
                 {
@@ -30,7 +30,7 @@ namespace Fjosid.Pages
             {
                 if (LanguageId == 2)
                 {
-                    return "At Fjósið, we understand the importance of finding the right space for your meetings. That's why we offer flexible rental options to accommodate your needs. Choose between a full day rental for 6000 DKK or a half-day rental for 3000 DKK, both of which include complimentary coffee and water throughout your event. Our venue is equipped with essential amenities such as a projector and canvas, ensuring seamless presentations and discussions. Whether you're hosting a corporate workshop, training session, or board meeting, Fjósið provides the ideal setting for productive gatherings.";
+                    return "At Fjósið, we understand that every event is unique, which is why we offer flexible rental options to suit your needs. Choose from a full-day rental or a half-day rental, depending on the duration of your event. Our full-day rental option allows you exclusive access to the venue for the entire day, from setup to cleanup, ensuring ample time to create cherished memories with your guests. For shorter gatherings, our half-day rental option provides the perfect solution, allowing you to enjoy all the amenities of Fjósið for a convenient timeframe. Whatever your event requires, we're here to accommodate your needs with our affordable and convenient rental options.";
                 }
                 else
                 {
@@ -45,7 +45,7 @@ namespace Fjosid.Pages
             {
                 if (LanguageId == 2)
                 {
-                    return "Our venue is designed to enhance your meeting experience with convenient amenities and attentive services. Beyond the standard rental fee, you'll have access to complimentary coffee and water to keep your attendees refreshed and focused. The inclusion of a projector and canvas facilitates smooth presentations and visual aids, allowing you to convey your message effectively. Additionally, our dedicated staff is on hand to assist with any technical requirements or special requests, ensuring that your event runs seamlessly from start to finish.";
+                    return "Our pricing structure at Fjósið is designed to provide excellent value for your money, allowing you to host your event without breaking the bank. A full-day rental of our venue is priced at just 6000 DKK, while a half-day rental is available for 3000 DKK. This transparent pricing ensures that you know exactly what to expect, with no hidden fees or surprises. With Fjósið, you can host your event with confidence, knowing that you're getting the best value for your investment.";
                 }
                 else
                 {
@@ -60,7 +60,7 @@ namespace Fjosid.Pages
             {
                 if (LanguageId == 2)
                 {
-                    return "Ready to book Fjósið for your next meeting or corporate event? Securing your desired date is simple. Using the button below will take you to the bookings page and there it is possible to send a reservation. Whether you need the space for a full day or a half day, we'll work with you to accommodate your schedule. Upon confirmation, we'll provide all the necessary details and ensure that everything is in place for a successful event. Trust Fjósið to elevate your meetings with our exceptional venue and attentive service.";
+                    return "Ready to book your event at Fjósið? We make the process simple and stress-free. Using the button below will take you to the bookings page and there it is possible to send a reservation. Whether you have questions about availability, amenities, or special requests, we're here to assist you every step of the way. Contact us today to start planning your next unforgettable event at Fjósið!";
                 }
                 else
                 {

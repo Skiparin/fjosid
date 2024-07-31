@@ -15,6 +15,9 @@
                 @_intro
             </p>
             <p class="intro-section__text">
+                @_intro_1
+            </p>
+            <p class="intro-section__text">
                 @_intro_2
             </p>
         </div>
@@ -63,7 +66,7 @@
                     Farm-to-Table Cuisine
                 </h2>
                 <p class="details-section__text">
-                    At the heart of our culinary philosophy lies a deep commitment to farm-to-table dining, where every dish begins with fresh, locally-sourced ingredients. Our menu is a celebration of the seasons, featuring an ever-changing array of flavors that highlight the best of what the local farms offer. From crisp, garden-picked vegetables to free-range meats and artisanal cheeses, each ingredient is carefully selected to ensure the highest quality and taste. Our chefs artfully blend tradition with innovation, crafting dishes that not only delight the palate but also tell the story of the land and the hands that nurtured it. Dining with us is more than a meal; it's an intimate journey through the local countryside's bountiful produce and a tribute to the community of farmers and artisans who bring their passion to your plate.
+                    At the heart of Fjósið lies our commitment to serving fresh, flavorful cuisine sourced directly from our local farm and other nearby producers. Our menu showcases the bounty of the season, with ingredients harvested at peak ripeness and prepared with care by our chefs. From tender cuts of meat to vibrant vegetables and artisanal cheeses, every dish reflects the passion and dedication of our farm-to-table philosophy. Whether you're indulging in a leisurely meal or hosting a corporate luncheon, you can taste the difference that locally sourced ingredients make in every bite.
                 </p>
                 <div class="details-section__button-wrapper">
                     <MudButton Style="background: rgba(0, 0, 0, 1); color: goldenrod;" @onclick="NavToBooking" ButtonType="ButtonType.Button" Variant="Variant.Filled">
@@ -84,7 +87,7 @@
                     Unique Dining Experience
                 </h2>
                 <p class="details-section__text">
-                    Our restaurant proudly stands as a beacon of sustainability and community spirit. We're committed to eco-friendly practices, from sourcing ingredients from local farms to minimizing our environmental footprint in every aspect of operation. We believe in giving back to the land that feeds us, engaging in sustainable agriculture and energy-efficient initiatives. Beyond our kitchen, we foster a strong sense of community by supporting local artisans, hosting events that celebrate local culture, and participating in initiatives that enrich our neighborhood. Each meal served not only brings delight to your taste buds but also contributes to a greater cause—nurturing a sustainable future and strengthening the bonds within our community.
+                    At Fjósið, dining transcends the mere act of eating—it's an immersive journey to be cherished and shared amongst cherished company. Our venue provides a distinctive backdrop that elevates every occasion, whether it's an intimate gathering or a lively celebration. Picture yourself enveloped in the cozy ambiance of our rustic interiors, where every corner tells a story of heritage and hospitality. Whether you're basking in the soft glow of candlelight or admiring the sweeping vistas of the surrounding countryside, each moment spent at Fjósið is a testament to the warmth, camaraderie, and sense of belonging that define our ethos.
                 </p>
                 <div class="details-section__button-wrapper">
                     <MudButton Style="background: rgba(0, 0, 0, 1);" ButtonType="ButtonType.Button" Variant="Variant.Filled">
@@ -103,19 +106,21 @@
         </h2>
 
         <div class="offers-section__contant-wrapper">
-            <div class="offers-section__offer-section">
-                <MudImage class="offers-section__offer-image" ObjectFit=ObjectFit.Cover Src="images/luttakarar_3_2.jpg"></MudImage>
-                <h4 class="offers-section__offer-title">
-                    A Complete Dining Experience
-                </h4>
-            </div>
+            <a style="color: goldenrod;" href="images/Menu.pdf" target="_blank">
+                <div class="offers-section__offer-section">
+                    <MudImage class="offers-section__offer-image" ObjectFit=ObjectFit.Cover Src="images/luttakarar_3_2.jpg"></MudImage>
+                    <h4 class="offers-section__offer-title">
+                        A Complete Dining Experience
+                    </h4>
+                </div>
+            </a>
             <div class="offers-section__offer-section" @onclick="NavToMeetings">
                 <MudImage class="offers-section__offer-image" ObjectFit=ObjectFit.Cover Src="images/luttakarar_7.jpg"></MudImage>
                 <h4 class="offers-section__offer-title">
                     Meetings and Events
                 </h4>
             </div>
-            <div class="offers-section__offer-section">
+            <div class="offers-section__offer-section" @onclick="NavToRentAsVenue">
                 <MudImage class="offers-section__offer-image" ObjectFit=ObjectFit.Cover Src="images/matur_14.jpg"></MudImage>
                 <h4 class="offers-section__offer-title">
                     Rent Fjósið as a Venue

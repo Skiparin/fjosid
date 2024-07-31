@@ -19,11 +19,26 @@ namespace Fjosid.Pages
             {
                 if (LanguageId == 2)
                 {
-                    return "At the heart of our culinary philosophy lies a deep commitment to farm-\r\nto-table dining, where every dish begins with fresh, locally-sourced\r\ningredients. Our menu is a celebration of the seasons, featuring (an\r\never-changing array of) flavors that highlight the best of what the local\r\nfarms offer. From crisp, garden-picked vegetables to free-range meats\r\n(and artisanal cheeses), each ingredient is carefully selected to ensure\r\nthe highest quality and taste. Our chefs (artfully) blend tradition with\r\ninnovation, crafting dishes that not only delight the palate but also tell\r\nthe story of the land and the hands that nurtured it. Dining with us is\r\nmore than a meal; it's an intimate journey through the local\r\ncountryside's bountiful produce and a tribute to the community of\r\nfarmers and artisans who bring their passion to your plate.";
+                    return "Welcome to Fjósið, a haven of rustic elegance and culinary excellence nestled in the picturesque countryside of Bøur. From its humble origins as a historic barn, Fjósið has been lovingly transformed into a multifaceted destination where dining, celebration, and tradition converge.";
                 }
                 else
                 {
                     return "Okkara hjartamál er at borðreiða við so nógvum staðbundnum mati\r\nsum gjørligt. Vit eru fleiri í hesum felagnum og øll hava seyð og so hava\r\nvit eisini nøgur skotsk Highland neyt. Har aftur at hava vit velt epli og\r\nfara í næstum undir at byggja eitt rúm til hydrophonics grønmeti,\r\nsoleiðis at vit eisini kunnu borðreiða við feskast møguligum grønmeti.";
+                }
+            }
+        }
+
+        private string _intro_1
+        {
+            get
+            {
+                if (LanguageId == 2)
+                {
+                    return "Step through our doors and embark on a journey through time, where the rustic beauty of yesteryear seamlessly blends with the comforts of modern hospitality. At Fjósið, we pride ourselves on offering more than just a meal or a space to gather—we provide an immersive experience that engages all the senses and leaves a lasting impression. Our historic barn, meticulously restored to its former glory, serves as the backdrop for an array of events, from intimate dinners to grand celebrations. Exposed wooden beams, soft candlelight, and the gentle hum of conversation create an ambiance that is both timeless and inviting, inviting guests to linger and make memories that will be cherished for years to come.";
+                }
+                else
+                {
+                    return "Tað sum vit ikki hava sjálvi, royna vit at keypa í nærumhvørvinum. Tað\r\nkann vera røtur úr Gásadali, laksur frá Luna, ella útróðrarfisk. Uttanfyri\r\nhava vit eisini eitt høsnarhús, soleiðis at vit fáa okkaru egg frá hønunum\r\nhar og sum vit vita hava tað gott og ikki livað nakað strongt lív.";
                 }
             }
         }
@@ -34,7 +49,7 @@ namespace Fjosid.Pages
             {
                 if (LanguageId == 2)
                 {
-                    return string.Empty;
+                    return "Whether you're joining us for a leisurely meal, hosting a corporate retreat, or celebrating life's milestones with friends and family, Fjósið welcomes you with open arms and a warm Faroese embrace. Come experience the magic of Fjósið for yourself and discover why it's more than just a venue—it's a destination where dreams come to life and memories are made to last a lifetime.";
                 }
                 else
                 {
@@ -49,7 +64,7 @@ namespace Fjosid.Pages
             {
                 if (LanguageId == 2)
                 {
-                    return "Steeped in history and rustic charm, our restaurant embraces the heritage of its origins—a beautifully renovated barn that once stood as the heart of a bustling farm. We've meticulously preserved the barn's authentic character, from the old ceiling to the original stone walls, creating a warm, inviting ambiance that transports you to a bygone era. Each corner of our dining space tells a story.";
+                    return "At Fjósið, we celebrate our rich heritage and the rustic ambiance of our surroundings. Our venue, housed in a beautifully restored barn, exudes warmth and character, with exposed beams, wooden accents, and cozy nooks that invite you to relax and unwind. As you dine or gather with friends and family, you'll feel a connection to the land and the generations of farmers who have called this place home. Whether you're seated at a handcrafted table or enjoying the view from our spacious patio, every corner of Fjósið tells a story of tradition, craftsmanship, and timeless beauty.";
                 }
                 else
                 {
@@ -83,6 +98,11 @@ namespace Fjosid.Pages
         private void NavToMeetings()
         {
             NavigationManager.NavigateTo("/Meetings");
+        }
+
+        private void NavToRentAsVenue()
+        {
+            NavigationManager.NavigateTo("/Rent_As_Venue");
         }
     }
 }

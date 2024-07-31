@@ -209,6 +209,10 @@ a, .btn-link {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0); /* Add transparent box-shadow */
 }
 
+.test {
+    color: goldenrod !important;
+}
+
 .offers-section__offer-section:hover {
     transform: scale(1.05); /* Increase the scale to 110% on hover */
     cursor: pointer;
