@@ -32,18 +32,26 @@
                 <MudToggleItem T="int" Value="2" Text="EN" />
             </MudToggleGroup>
 
-            <MudMenu
-                     Icon="@Icons.Material.Outlined.Menu"
-                     Color="Color.Inherit"
-                     IconColor="Color.Secondary"
-                     AnchorOrigin="@Origin.BottomCenter"
-                     TransformOrigin="@Origin.TopRight">
-                <MudMenuItem><a style="color: goldenrod;" href="/">Home</a></MudMenuItem>
-                <MudMenuItem><a style="color: goldenrod;" href="images/Menu.pdf" target="_blank">Menu</a></MudMenuItem>
-                <MudMenuItem><a style="color: goldenrod;" href="/Meetings">Meetings</a></MudMenuItem>
-                <MudMenuItem><a style="color: goldenrod;" href="/Rent_As_Venue">Rent As Venue</a></MudMenuItem>
-                <MudMenuItem><a style="color: goldenrod;" href="/Booking">Booking</a></MudMenuItem>
-            </MudMenu>
+            <MudDrawer @bind-Open="@_open" hidden="@(_open == false)" Style="background-color: black;" Color="Color.Inherit" Anchor="@Anchor.End" Elevation="2"  Variant="@DrawerVariant.Temporary">
+                <MudDrawerHeader>
+                    <MudText Style="color: goldenrod;" Typo="Typo.h6">Fjósið</MudText>
+                </MudDrawerHeader>
+                <MudNavMenu>
+                    <MudDivider />
+                    <MudNavLink Class="side-menu-item__container" Href="/" Match="NavLinkMatch.All">Home</MudNavLink>
+                    <MudDivider/>
+                    <MudNavLink Class="side-menu-item__container" Href="images/Menu.pdf" Match="NavLinkMatch.All" Target="_blank">Menu</MudNavLink>
+                    <MudDivider/>
+                    <MudNavLink Class="side-menu-item__container" Href="/Booking" Match="NavLinkMatch.All">Booking</MudNavLink>
+                    <MudDivider/>
+                    <MudNavLink Class="side-menu-item__container" Href="/Meetings" Match="NavLinkMatch.All">Meetings</MudNavLink>
+                    <MudDivider/>
+                    <MudNavLink Class="side-menu-item__container" Href="/Gallery" Match="NavLinkMatch.All">Gallery</MudNavLink>
+                    <MudDivider />
+                </MudNavMenu>
+            </MudDrawer>
+
+            <MudIconButton Icon="@Icons.Material.Filled.Menu" Style="color: goldenrod;" Edge="Edge.Start" OnClick="@OpenDrawer" />
         </div>
     </div>
 
@@ -100,4 +108,11 @@
 @code {
     [CascadingParameter]
     public int LanguageId { get; set; } = 2;
+    
+    private bool _open;
+    
+    private void OpenDrawer()
+    {
+        _open = true;
+    }
 }
