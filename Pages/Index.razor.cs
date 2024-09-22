@@ -79,7 +79,7 @@ namespace Fjosid.Pages
             {
                 if (LanguageId == 2)
                 {
-                    return "Steeped in history and rustic charm, a restaurant embraces the heritage of its origins—a beautifully renovated barn that once stood as the heart of a bustling farm. We've meticulously preserved the barn's authentic character, from the old ceiling to the original stone walls, creating a warm, inviting ambiance that transports you to a bygone era. Each corner of our dining space tells a story.";
+                    return "Steeped in history and rustic charm, our restaurant embraces the heritage of its origins—a beautifully renovated barn that once stood as the heart of a bustling farm. We've meticulously preserved the barn's authentic character, from the old ceiling to the original stone walls, creating a warm, inviting ambiance that transports you to a bygone era. Each corner of our dining space tells a story.";
                 }
                 else
                 {

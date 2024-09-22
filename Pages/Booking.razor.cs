@@ -170,7 +170,7 @@ Boð: {_message}
                 Body = body
             })
             {
-                //smtp.Send(message);
+                smtp.Send(message);
             }
         }
     }

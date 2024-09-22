@@ -7,6 +7,8 @@ namespace Fjosid.Pages
         [CascadingParameter]
         public int LanguageId { get; set; } = 2;
 
+        [Inject] NavigationManager NavigationManager { get; set; } = default!;
+
         private string _text
         {
             get
@@ -96,8 +98,6 @@ namespace Fjosid.Pages
                 }
             }
         }
-
-        [Inject] NavigationManager NavigationManager { get; set; } = default!;
 
         private void NavToBooking()
         {
