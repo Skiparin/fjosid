@@ -12,6 +12,36 @@ namespace Fjosid.Pages
     {
         [CascadingParameter]
         public int LanguageId { get; set; } = 2;
+        
+        private string _imageTitle
+        {
+            get
+            {
+                if (LanguageId == 2)
+                {
+                    return "Welcome to Fjósið";
+                }
+                else
+                {
+                    return "Vælkomin til Fjósið";
+                }
+            }
+        }
+        
+        private string _imageText
+        {
+            get
+            {
+                if (LanguageId == 2)
+                {
+                    return "Located in the village of Bøur, Fjósið is a unique restaurant situated in the top part of a barn. We provide a farm-to-table dining experience with ingredients sourced from our farm, including lamb and cow, as well as local salmon. Open to the public seasonally, Fjósið also accepts year-round bookings for private dining, meetings, and events.";
+                }
+                else
+                {
+                    return "Fjósið er ein serstøk matstova, sum liggur í bygdini Bøur, í ovaru hædd av einum fjósi. Vit bjóða eina farm-to-table matskrá við rávørum frá okkara egna bóndagarði, so sum lamb og neytakjøt, umframt lokalt laks. Opið fyri almenninginum ávís tíðarskeið, men Fjósið tekur ímóti bíleggingum fyri privat borðhald, fundir og tiltøk alt árið.";
+                }
+            }
+        }
 
         private string _intro
         {
@@ -49,7 +79,7 @@ namespace Fjosid.Pages
             {
                 if (LanguageId == 2)
                 {
-                    return "Steeped in history and rustic charm, our restaurant embraces the heritage of its origins—a beautifully renovated barn that once stood as the heart of a bustling farm. We've meticulously preserved the barn's authentic character, from the old ceiling to the original stone walls, creating a warm, inviting ambiance that transports you to a bygone era. Each corner of our dining space tells a story.";
+                    return "Steeped in history and rustic charm, a restaurant embraces the heritage of its origins—a beautifully renovated barn that once stood as the heart of a bustling farm. We've meticulously preserved the barn's authentic character, from the old ceiling to the original stone walls, creating a warm, inviting ambiance that transports you to a bygone era. Each corner of our dining space tells a story.";
                 }
                 else
                 {

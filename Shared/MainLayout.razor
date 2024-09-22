@@ -7,7 +7,7 @@
 <PageTitle>Fjosid</PageTitle>
 
 <div class="page">
-    <div class="top-panel" style="background: rgba(0, 0, 0, 1); display: flex; justify-content: space-between;">
+    <div class="top-panel" style="background: rgba(0, 0, 0, 1); display: flex; justify-content: space-between; height: 8vh;">
         <div style="display: flex; align-items: center;">
             <a href="/">
                 <img src="images/fjosid_icon_row.png" alt="Icon" />
@@ -18,7 +18,7 @@
                     <li><a style="color: goldenrod;" href="images/Menu.pdf" target="_blank">Menu</a></li>
                     <li><a style="color: goldenrod;" href="/Booking">Booking</a></li>
                     <li><a style="color: goldenrod;" href="/Meetings">Meetings</a></li>
-                    <li><a style="color: goldenrod;" href="/Gallery">Gallery</a></li>
+                    @* <li><a style="color: goldenrod;" href="/Gallery">Gallery</a></li> *@
                 </ul>
             </nav>
         </div>
@@ -27,7 +27,7 @@
             <a class="social-media-link" target="_blank" style="color: goldenrod;" href="https://www.facebook.com/profile.php?id=61551701065518"><i class="fa fa-facebook" style="font-size:24px"></i></a>
             <a class="social-media-link" target="_blank" style="color: goldenrod;" href="https://www.instagram.com/fjosid2023/"><i class="fa fa-instagram" style="font-size:24px"></i></a>
 
-            <MudToggleGroup T="int" Dense="true" SelectionMode="SelectionMode.ToggleSelection" @bind-Value="LanguageId">
+            <MudToggleGroup Class="toggle-group" T="int" Dense="true" SelectionMode="SelectionMode.ToggleSelection" @bind-Value="LanguageId">
                 <MudToggleItem T="int" Value="1" Text="FO" />
                 <MudToggleItem T="int" Value="2" Text="EN" />
             </MudToggleGroup>
@@ -46,8 +46,8 @@
                     <MudDivider/>
                     <MudNavLink Class="side-menu-item__container" Href="/Meetings" Match="NavLinkMatch.All">Meetings</MudNavLink>
                     <MudDivider/>
-                    <MudNavLink Class="side-menu-item__container" Href="/Gallery" Match="NavLinkMatch.All">Gallery</MudNavLink>
-                    <MudDivider />
+                    @* <MudNavLink Class="side-menu-item__container" Href="/Gallery" Match="NavLinkMatch.All">Gallery</MudNavLink> *@
+                    @* <MudDivider /> *@
                 </MudNavMenu>
             </MudDrawer>
 
@@ -84,6 +84,9 @@
             </span>
             <span style="color: goldenrod;">
                 +298 286032
+            </span>
+            <span style="color: goldenrod;">
+                +298 780810
             </span>
             <span style="color: goldenrod;">
                 FJOSID2023@GMAIL.COM

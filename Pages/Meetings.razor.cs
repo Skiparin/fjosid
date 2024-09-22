@@ -13,11 +13,11 @@ namespace Fjosid.Pages
             {
                 if (LanguageId == 2)
                 {
-                    return "Welcome to Fjósið, where we offer a versatile venue that seamlessly transitions from a cozy restaurant atmosphere to a dynamic event space. Nestled in Bøur, Fjósið caters to various occasions, from intimate gatherings to corporate meetings. Our venue rental service provides the perfect backdrop for your event, whether it's a professional seminar or a personal celebration. With state-of-the-art amenities and a warm ambiance, Fjósið ensures an unforgettable experience for you and your guests.";
+                    return "Welcome to Fjósið. Our venue offers a flexible space that easily adapts from a cozy restaurant setting to a functional event area. Located in Bøur, Fjósið is suitable for a range of occasions, from small gatherings to corporate meetings. Whether you’re planning a seminar or a personal celebration, our rental service provides a simple and fitting setting for your event. With modern facilities and a welcoming atmosphere, Fjósið aims to create a comfortable experience for you and your guests.";
                 }
                 else
                 {
-                    return "Okkara hjartamál er at borðreiða við so nógvum staðbundnum mati\r\nsum gjørligt. Vit eru fleiri í hesum felagnum og øll hava seyð og so hava\r\nvit eisini nøgur skotsk Highland neyt. Har aftur at hava vit velt epli og\r\nfara í næstum undir at byggja eitt rúm til hydrophonics grønmeti,\r\nsoleiðis at vit eisini kunnu borðreiða við feskast møguligum grønmeti.";
+                    return "Vælkomin til Fjósið. Okkara høli er eitt fjølbroytt stað, sum lættliga kann verða brúkt bæði sum hugnaligur matsalur og sum virkisøki til ymisk tiltøk. Liggandi í Bø, er Fjósið væl egnað til ymisk sløg av tiltøkum, frá smærri samkomum til vinnuligar fundir. Um tú ætlar eitt seminar ella eina persónliga hátíð, bjóðar okkara leigutænasta eitt hóskandi og einfalt høli til títt tiltak. Við nýggjum hentleikum og eini blíðari atmosfæru, miðar Fjósið eftir at skapa eina hugnaliga uppliving fyri teg og tínar gestir.";
                 }
             }
         }
@@ -28,11 +28,26 @@ namespace Fjosid.Pages
             {
                 if (LanguageId == 2)
                 {
-                    return "At Fjósið, we understand the importance of finding the right space for your meetings. That's why we offer flexible rental options to accommodate your needs. Choose between a full day rental for 6000 DKK or a half-day rental for 3000 DKK, both of which include complimentary coffee and water throughout your event. Our venue is equipped with essential amenities such as a projector and canvas, ensuring seamless presentations and discussions. Whether you're hosting a corporate workshop, training session, or board meeting, Fjósið provides the ideal setting for productive gatherings.";
+                    return "If you want to have a meeting in the Faroe Islands, you can come to us. Besides breathtaking views and a cosy environment, we have a overhead projector, loudspeaker and a flippboard. We see to that you have coffee/tea and water during the day and there is also possibilty to order food for the day. It can be breakfast, lunch, cake or all 3. This must of course be ordered before hand.";
                 }
                 else
                 {
-                    return "Okkara hjartamál er at borðreiða við so nógvum staðbundnum mati\r\nsum gjørligt. Vit eru fleiri í hesum felagnum og øll hava seyð og so hava\r\nvit eisini nøgur skotsk Highland neyt. Har aftur at hava vit velt epli og\r\nfara í næstum undir at byggja eitt rúm til hydrophonics grønmeti,\r\nsoleiðis at vit eisini kunnu borðreiða við feskast møguligum grønmeti.";
+                    return "Um tit skulu hava eitt fundarhølið, er Fjósið ein góður møguleiki. Burtursæð frá tí vakra útsýninum og tí hugnaliga hølinum, hava vit uppvørpu, hátalara og flippboard og syrgja fyri at tit hava kaffi/te og vatn ígjøgnum dagin. Eisini er møguleiki at keypa mat afturat, tað kann vera morgunmatur, miðmáli (frokost), ella kaka. Hetta má sjálvandi bíleggjast áðrenn.";
+                }
+            }
+        }
+        
+        private string _text_2_2
+        {
+            get
+            {
+                if (LanguageId == 2)
+                {
+                    return "The price for \u00bd day is 3000 DKK VAT not included and a whole day, 6000 DKK VAT not incl.";
+                }
+                else
+                {
+                    return "Prísurin fyri \u00bd dag er 3000kr. uttan mvg og fyri heilan dag 6000kr uttan mvg.";
                 }
             }
         }
@@ -43,11 +58,26 @@ namespace Fjosid.Pages
             {
                 if (LanguageId == 2)
                 {
-                    return "Our venue is designed to enhance your meeting experience with convenient amenities and attentive services. Beyond the standard rental fee, you'll have access to complimentary coffee and water to keep your attendees refreshed and focused. The inclusion of a projector and canvas facilitates smooth presentations and visual aids, allowing you to convey your message effectively. Additionally, our dedicated staff is on hand to assist with any technical requirements or special requests, ensuring that your event runs seamlessly from start to finish.";
+                    return "If you want to host a birthday or something similar, away from home, you can rent our venue and you see to the food yourselves. You clean up afterwards, but we do the washing.";
                 }
                 else
                 {
-                    return "Okkara hjartamál er at borðreiða við so nógvum staðbundnum mati\r\nsum gjørligt. Vit eru fleiri í hesum felagnum og øll hava seyð og so hava\r\nvit eisini nøgur skotsk Highland neyt. Har aftur at hava vit velt epli og\r\nfara í næstum undir at byggja eitt rúm til hydrophonics grønmeti,\r\nsoleiðis at vit eisini kunnu borðreiða við feskast møguligum grønmeti.";
+                    return "Um tú skalt halda føðingardag, konfirmatión ella líknandi ber til at leiga hølið hjá okkum og so standa tit sjálvi fyri matinum. Tit rudda sjálvandi upp eftir tykkum, men vit vaska bæði áðrenn og aftaná.";
+                }
+            }
+        }
+        
+        private string _text_3_2
+        {
+            get
+            {
+                if (LanguageId == 2)
+                {
+                    return "This costs 3750 DKK VAT inc.";
+                }
+                else
+                {
+                    return "Hetta kostar fyri eitt døgn 3750kr. við mvg.";
                 }
             }
         }
@@ -62,7 +92,7 @@ namespace Fjosid.Pages
                 }
                 else
                 {
-                    return "Okkara hjartamál er at borðreiða við so nógvum staðbundnum mati\r\nsum gjørligt. Vit eru fleiri í hesum felagnum og øll hava seyð og so hava\r\nvit eisini nøgur skotsk Highland neyt. Har aftur at hava vit velt epli og\r\nfara í næstum undir at byggja eitt rúm til hydrophonics grønmeti,\r\nsoleiðis at vit eisini kunnu borðreiða við feskast møguligum grønmeti.";
+                    return "Ert tú klár/ur at bíleggja Fjósið til tín næsta fund ella vinnuliga tiltak?\nAt tryggja tær ynsktu dagfestingina er einfalt. Við at trýsta á knøttin niðanfyri, kemur tú á bíleggingarsíðuna, har tú kanst senda eina bílegging. Um tú hevur brúk fyri hølinum til ein heilendan dag ella hálvan dag, so arbeiða vit saman við tær at laga tað til tín tíðarætlan. Eftir váttan, geva vit tær øll neyðug tíðindi og tryggja, at alt er klárt til eitt væleydnað tiltak. Tú kanst líta á Fjósið til at lyfta tínar fundir við okkara framúrskarandi høli og uppmerkssama tænastu.";
                 }
             }
         }
