@@ -14,11 +14,11 @@
             </a>
             <nav class="top-nav-menu">
                 <ul>
-                    <li><a style="color: goldenrod;" href="/">Home</a></li>
-                    <li><a style="color: goldenrod;" href="images/Menu.pdf" target="_blank">Menu</a></li>
-                    <li><a style="color: goldenrod;" href="/Booking">Booking</a></li>
-                    <li><a style="color: goldenrod;" href="/Meetings">Meetings</a></li>
-                    <li><a style="color: goldenrod;" href="/Gallery">Gallery</a></li>
+                    <li><a style="color: goldenrod;" href="/">@_home</a></li>
+                    <li><a style="color: goldenrod;" href="images/Menu.pdf" target="_blank">@_menu</a></li>
+                    <li><a style="color: goldenrod;" href="/Booking">@_booking</a></li>
+                    <li><a style="color: goldenrod;" href="/Meetings">@_meetings</a></li>
+                    <li><a style="color: goldenrod;" href="/Rent_As_Venue">@_rent_as_venue</a></li>
                 </ul>
             </nav>
         </div>
@@ -38,15 +38,15 @@
                 </MudDrawerHeader>
                 <MudNavMenu>
                     <MudDivider />
-                    <MudNavLink Class="side-menu-item__container" Href="/" Match="NavLinkMatch.All">Home</MudNavLink>
+                    <MudNavLink Class="side-menu-item__container" Href="/" Match="NavLinkMatch.All">@_home</MudNavLink>
                     <MudDivider/>
-                    <MudNavLink Class="side-menu-item__container" Href="images/Menu.pdf" Match="NavLinkMatch.All" Target="_blank">Menu</MudNavLink>
+                    <MudNavLink Class="side-menu-item__container" Href="images/Menu.pdf" Match="NavLinkMatch.All" Target="_blank">@_menu</MudNavLink>
                     <MudDivider/>
-                    <MudNavLink Class="side-menu-item__container" Href="/Booking" Match="NavLinkMatch.All">Booking</MudNavLink>
+                    <MudNavLink Class="side-menu-item__container" Href="/Booking" Match="NavLinkMatch.All">@_booking</MudNavLink>
                     <MudDivider/>
-                    <MudNavLink Class="side-menu-item__container" Href="/Meetings" Match="NavLinkMatch.All">Meetings</MudNavLink>
+                    <MudNavLink Class="side-menu-item__container" Href="/Meetings" Match="NavLinkMatch.All">@_meetings</MudNavLink>
                     <MudDivider/>
-                    <MudNavLink Class="side-menu-item__container" Href="/Gallery" Match="NavLinkMatch.All">Gallery</MudNavLink>
+                    <MudNavLink Class="side-menu-item__container" Href="/Rent_As_Venue" Match="NavLinkMatch.All">@_rent_as_venue</MudNavLink>
                     <MudDivider />
                 </MudNavMenu>
             </MudDrawer>
@@ -108,6 +108,81 @@
 @code {
     [CascadingParameter]
     public int LanguageId { get; set; } = 2;
+    
+    private string _home
+    {
+        get
+        {
+            if (LanguageId == 2)
+            {
+                return "Home";
+            }
+            else
+            {
+                return "Heim";
+            }
+        }
+    }
+    
+    private string _menu
+    {
+        get
+        {
+            if (LanguageId == 2)
+            {
+                return "Menu";
+            }
+            else
+            {
+                return "Menu";
+            }
+        }
+    }
+    
+    private string _booking
+    {
+        get
+        {
+            if (LanguageId == 2)
+            {
+                return "Booking";
+            }
+            else
+            {
+                return "Bóking";
+            }
+        }
+    }
+    
+    private string _meetings
+    {
+        get
+        {
+            if (LanguageId == 2)
+            {
+                return "Meetings";
+            }
+            else
+            {
+                return "Fundir";
+            }
+        }
+    }
+    
+    private string _rent_as_venue
+    {
+        get
+        {
+            if (LanguageId == 2)
+            {
+                return "Rent as venue";
+            }
+            else
+            {
+                return "Leiða høli";
+            }
+        }
+    }
     
     private bool _open;
     

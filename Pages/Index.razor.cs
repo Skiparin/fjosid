@@ -114,5 +114,10 @@ namespace Fjosid.Pages
         {
             NavigationManager.NavigateTo("/Meetings");
         }
+        
+        private void NavToRentAsVenue()
+        {
+            NavigationManager.NavigateTo("/Rent_As_Venue");
+        }
     }
 }
