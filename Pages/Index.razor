@@ -6,40 +6,20 @@
 <PageTitle>Fjósið</PageTitle>
 
 
-<div style="min-height: 654px;
-    position: relative;
-    aspect-ratio: unset;
-    height: 92vh;
-    align-items: center;
-    display: flex;
-    justify-content: center;">
-    <img style="bottom: 0;
-    box-shadow: none;
-    height: 100%;
-    left: 0;
-    margin: 0;
-    max-height: none;
-    max-width: none;
-    object-fit: cover;
-    outline: none;
-    padding: 0;
-    position: absolute;
-    right: 0;
-    top: 0px;
-    width: 100%;
-    object-position: 50% 79%;" src="images/høli_11.jpg" />
-    <div style="max-width: 58rem; z-index: 1; padding: 0 2rem; width: 100% !important; position: absolute; margin-bottom: 20rem;">
-        <h1 style="margin: 0 0 1rem 0; color: #ffffff !important; font-size: 64px; line-height: 1.25; text-align: center; text-shadow: 0 2px 4px rgba(0, 0, 0, .5); font-family: vag-rundschrift-d;">
+<div class="intro-image-container">
+    <img class="intro-image" style="object-position: 50% 79%;" src="images/høli_11.jpg" />
+    <div class="intro-image-text-container">
+        <h1 class="intro-image-title">
             @_imageTitle
         </h1>
-        <h2 style="font-size: 20px; line-height: 30px; color: #ffffff !important; text-align: center; text-shadow: 0 2px 4px rgba(0, 0, 0, .5); font-family: vag-rundschrift-d;">
+        <h2 class="intro-image-text">
             @_imageText
         </h2>
     </div>
 </div>
 
 <div style="margin-bottom: 6rem;">
-    <div class="intro-section">
+    @* <div class="intro-section">
         <div class="intro-section__text-wrapper">
             <h2 class="intro-section__title">
                 Fjósið
@@ -72,7 +52,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> *@
 
     <div class="details-section">
         <div class="details-section__text-image-section">
@@ -81,29 +61,30 @@
             </div>
             <div class="details-section__text-wrapper">
                 <h2 class="details-section__title">
-                    Rustic Ambiance and Heritage
+                    @_detailsTitle
                 </h2>
                 <p class="details-section__text">
                     @_details
                 </p>
                 <div class="details-section__button-wrapper">
-                    <MudButton Style="background: rgba(0, 0, 0, 1); color: goldenrod;" @onclick="NavToGallery" ButtonType="ButtonType.Button" Variant="Variant.Filled">
-                        Gallery
+                    <MudButton Style="background: rgba(0, 0, 0, 1); color: goldenrod;" @onclick="NavToBooking" ButtonType="ButtonType.Button" Variant="Variant.Filled">
+                        @_booking
                     </MudButton>
+                    
                 </div>
             </div>
         </div>
         <div class="section-to-animate details-section__text-image-section-2" style="background-color: #FFFFFF;">
             <div class="details-section__text-wrapper">
                 <h2 class="details-section__title">
-                    Farm-to-Table Cuisine
+                    @_detailsTitle_2
                 </h2>
                 <p class="details-section__text">
-                    At the heart of Fjósið lies our commitment to serving fresh, flavorful cuisine sourced directly from our local farm and other nearby producers. Our menu showcases the bounty of the season, with ingredients harvested at peak ripeness and prepared with care by our chefs. From tender cuts of meat to vibrant vegetables and artisanal cheeses, every dish reflects the passion and dedication of our farm-to-table philosophy. Whether you're indulging in a leisurely meal or hosting a corporate luncheon, you can taste the difference that locally sourced ingredients make in every bite.
+                    @_details_2
                 </p>
                 <div class="details-section__button-wrapper">
-                    <MudButton Style="background: rgba(0, 0, 0, 1); color: goldenrod;" @onclick="NavToBooking" ButtonType="ButtonType.Button" Variant="Variant.Filled">
-                        Booking
+                    <MudButton Style="background: rgba(0, 0, 0, 1);" ButtonType="ButtonType.Button" Variant="Variant.Filled">
+                        <a href="images/Menu.pdf" target="_blank" style="color: goldenrod;">@_menu</a>
                     </MudButton>
                 </div>
             </div>
@@ -117,14 +98,14 @@
             </div>
             <div class="details-section__text-wrapper">
                 <h2 class="details-section__title">
-                    Unique Dining Experience
+                    @_detailsTitle_3
                 </h2>
                 <p class="details-section__text">
-                    At Fjósið, dining transcends the mere act of eating—it's an immersive journey to be cherished and shared amongst cherished company. Our venue provides a distinctive backdrop that elevates every occasion, whether it's an intimate gathering or a lively celebration. Picture yourself enveloped in the cozy ambiance of our rustic interiors, where every corner tells a story of heritage and hospitality. Whether you're basking in the soft glow of candlelight or admiring the sweeping vistas of the surrounding countryside, each moment spent at Fjósið is a testament to the warmth, camaraderie, and sense of belonging that define our ethos.
+                    @_details_3
                 </p>
                 <div class="details-section__button-wrapper">
-                    <MudButton Style="background: rgba(0, 0, 0, 1);" ButtonType="ButtonType.Button" Variant="Variant.Filled">
-                        <a href="images/Menu.pdf" target="_blank" style="color: goldenrod;">Menu</a>
+                    <MudButton Style="background: rgba(0, 0, 0, 1); color: goldenrod;" @onclick="NavToGallery" ButtonType="ButtonType.Button" Variant="Variant.Filled">
+                        @_gallery
                     </MudButton>
                 </div>
             </div>
@@ -135,27 +116,27 @@
 <div class="section-to-animate offers-section">
     <div class="offers-section-wrapper">
         <h2 class="offers-title">
-            What we offer
+            @_offer
         </h2>
         <div class="offers-section__contant-wrapper">
             <a style="color: goldenrod;" href="images/Menu.pdf" target="_blank">
                 <div class="offers-section__offer-section">
                     <MudImage class="offers-section__offer-image" ObjectFit=ObjectFit.Cover Src="images/luttakarar_3_2.jpg"></MudImage>
                     <h4 class="offers-section__offer-title">
-                        A Complete Dining Experience
+                        @_dining
                     </h4>
                 </div>
             </a>
             <div class="offers-section__offer-section" @onclick="NavToMeetings">
                 <MudImage class="offers-section__offer-image" ObjectFit=ObjectFit.Cover Src="images/luttakarar_7.jpg"></MudImage>
                 <h4 class="offers-section__offer-title">
-                    Meetings and Events
+                    @_events
                 </h4>
             </div>
             <div class="offers-section__offer-section" @onclick="NavToRentAsVenue">
                 <MudImage class="offers-section__offer-image" ObjectFit=ObjectFit.Cover Src="images/matur_14.jpg"></MudImage>
                 <h4 class="offers-section__offer-title">
-                    Rent Fjósið as a Venue
+                    @_venue
                 </h4>
             </div>
         </div>
@@ -167,7 +148,7 @@
 <div class="section-to-animate" style="display: grid; margin-bottom: 6rem;">
     <div style="display: grid;">
         <h2 class="about-us-title" style="justify-self: center;">
-            About us
+            @_umOkkum
         </h2>
     </div>
     <div style="display: flex; justify-content: center;">
@@ -176,14 +157,13 @@
                 <div class="about-us-section__image-text-wrapper">
                     <MudImage class="about-us-section__image" ObjectFit=ObjectFit.Cover Src="images/jenny_heri.jpg"></MudImage>
                     <p class="intro-section__text">
-                        Heri is the farmer and the one who came up with the idea of making part of the barn into a
-                        restaurant/venue. Jenny is the wife, boss, chef and cleaner.
+                        @_jennyHeri
                     </p>
                 </div>
                 <div class="about-us-section__image-text-wrapper">
                     <MudImage class="about-us-section__image" ObjectFit=ObjectFit.Cover Src="images/ellef_eystein.jpg"></MudImage>
                     <p class="intro-section__text">
-                        Our friends Eystein and Ellef, who run Bluegate.fo, add a bit of adventure to our experience. They offer sightseeing tours on their fast boats, making it easy for our guests to enjoy a day on the water and a meal in our barn.
+                        @_eydsteinEllef
                     </p>
                 </div>
             </div>
@@ -191,14 +171,14 @@
                 <div class="about-us-section__image-text-wrapper">
                     <MudImage class="about-us-section__image" ObjectFit=ObjectFit.Cover Src="images/eyðfinn_poula.jpg"></MudImage>
                     <p class="intro-section__text">
-                        Eyðfinn, Heri's cousin, helped turn the barn into what Fjósið is today. Together with his wife Poula, they’re a big part of our day-to-day life here, helping in the kitchen and keeping the place running smoothly.
+                        @_eydfinnPoula
                     </p>
 
                 </div>
                 <div class="about-us-section__image-text-wrapper">
                     <MudImage class="about-us-section__image" ObjectFit=ObjectFit.Cover Src="images/tórður.jpg"></MudImage>
                     <p class="intro-section__text">
-                        Tórður, Eyðfinn and Poula's son, is about to become a constructor. He’s been involved in making Fjósið a reality and represents the next generation of our community, blending old traditions with new ideas.
+                        @_tordur
                     </p>
                 </div>
             </div>
@@ -217,7 +197,7 @@
 
 <div class="section-to-animate map">
     <h2 class="offers-title">
-        Location
+        @_location
     </h2>
     <div id="map" style="height:500px;width:100%;" />
 </div>

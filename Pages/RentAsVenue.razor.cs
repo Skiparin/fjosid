@@ -9,6 +9,21 @@ namespace Fjosid.Pages
 
         [Inject] NavigationManager NavigationManager { get; set; } = default!;
 
+        private string _textTitle
+        {
+            get
+            {
+                if (LanguageId == 2)
+                {
+                    return "Rent As Venue";
+                }
+                else
+                {
+                    return "Leiga sum høli";
+                }
+            }
+        }
+
         private string _text
         {
             get
@@ -19,7 +34,22 @@ namespace Fjosid.Pages
                 }
                 else
                 {
-                    return "Okkara hjartamál er at borðreiða við so nógvum staðbundnum mati\r\nsum gjørligt. Vit eru fleiri í hesum felagnum og øll hava seyð og so hava\r\nvit eisini nøgur skotsk Highland neyt. Har aftur at hava vit velt epli og\r\nfara í næstum undir at byggja eitt rúm til hydrophonics grønmeti,\r\nsoleiðis at vit eisini kunnu borðreiða við feskast møguligum grønmeti.";
+                    return "Vælkomin í Fjósið - títt fjølbroytta stað til óforglemmiligar samkomur! Um tú ætlar tær eina føðingardagsveitslu, eina dópsveitslu ella okkurt annað serligt hátíðarhald, er Fjósið her fyri at gera tína løtu heilt serliga. Staðsett í hjartanum av Bø, bjóðar okkara høli eina serstaka samanrenning av rustikkari sjarma og nútímans hentleikum, sum er fullkomin til at skapa óforglemmiligar løtur saman við tínum kæru. Kom og uppdaga møguleikarnar, sum bíða tær í Fjósið!";
+                }
+            }
+        }
+
+        private string _textTitle_2
+        {
+            get
+            {
+                if (LanguageId == 2)
+                {
+                    return "Venue Rental Options";
+                }
+                else
+                {
+                    return "Leigumøguleikar fyri høli";
                 }
             }
         }
@@ -34,7 +64,22 @@ namespace Fjosid.Pages
                 }
                 else
                 {
-                    return "Okkara hjartamál er at borðreiða við so nógvum staðbundnum mati\r\nsum gjørligt. Vit eru fleiri í hesum felagnum og øll hava seyð og so hava\r\nvit eisini nøgur skotsk Highland neyt. Har aftur at hava vit velt epli og\r\nfara í næstum undir at byggja eitt rúm til hydrophonics grønmeti,\r\nsoleiðis at vit eisini kunnu borðreiða við feskast møguligum grønmeti.";
+                    return "Í Fjósið skilja vit, at hvør samkoma er serstøk, og tí bjóða vit fleksiblar leigumøguleikar, ið hóskandi til tín tørv. Tú kanst velja millum at leiga fyri ein heilan dag ella ein hálvan dag, alt eftir hvussu leingi títt tiltak varir. Við heildagsleigu hevur tú einkarrætt til hølið allan dagin, frá fyrireiking til reingerð, so tú kanst skapa dýrabærar minnir saman við tínum gestum. Til styttri tiltøk er okkara hálvdagsleiga tann fullkomna loysnin, sum gevur tær høvi at njóta allar hentleikarnar í Fjósið í einari hóskandi tíðarrammu. Hvat enn títt tiltak krevur, eru vit her til at nøkta tín tørv við okkara bíligu og snildu leigumøguleikum.";
+                }
+            }
+        }
+
+        private string _textTitle_3
+        {
+            get
+            {
+                if (LanguageId == 2)
+                {
+                    return "Pricing Information";
+                }
+                else
+                {
+                    return "Prísupplýsingar";
                 }
             }
         }
@@ -49,7 +94,22 @@ namespace Fjosid.Pages
                 }
                 else
                 {
-                    return "Okkara hjartamál er at borðreiða við so nógvum staðbundnum mati\r\nsum gjørligt. Vit eru fleiri í hesum felagnum og øll hava seyð og so hava\r\nvit eisini nøgur skotsk Highland neyt. Har aftur at hava vit velt epli og\r\nfara í næstum undir at byggja eitt rúm til hydrophonics grønmeti,\r\nsoleiðis at vit eisini kunnu borðreiða við feskast møguligum grønmeti.";
+                    return "Okkara prísir í Fjósið eru gjørdir til at geva tær framúr virði fyri pengarnar, so tú kanst hýsa tínum tiltaki uttan at sprongja búskaparætlanina. Ein heildagsleiga av okkara høli kostar bert 6000 DKK, meðan ein hálvdagsleiga er tøk fyri 3000 DKK. Hesir gjøgnumskygdu prísir tryggja, at tú veitst nágreiniliga, hvat tú kanst vænta, uttan duldar útreiðslur ella óvæntaðar kostnaðir. Við Fjósið kanst tú hava títt tiltak við fullum áliti, vitandi at tú fært besta virði fyri tína íløgu.";
+                }
+            }
+        }
+
+        private string _textTitle_4
+        {
+            get
+            {
+                if (LanguageId == 2)
+                {
+                    return "Booking and Inquiries";
+                }
+                else
+                {
+                    return "Bílegging og fyrispurningar";
                 }
             }
         }
@@ -64,7 +124,22 @@ namespace Fjosid.Pages
                 }
                 else
                 {
-                    return "Okkara hjartamál er at borðreiða við so nógvum staðbundnum mati\r\nsum gjørligt. Vit eru fleiri í hesum felagnum og øll hava seyð og so hava\r\nvit eisini nøgur skotsk Highland neyt. Har aftur at hava vit velt epli og\r\nfara í næstum undir at byggja eitt rúm til hydrophonics grønmeti,\r\nsoleiðis at vit eisini kunnu borðreiða við feskast møguligum grønmeti.";
+                    return "Klár/ur at bóka títt tiltak í Fjósið? Vit gera tilgongdina einfald og uttan stríð. Við at trýsta á knøttin niðanfyri, fert tú til bíleggingarsíðuna, har tú kanst senda eina bílegging. Um tú hevur spurningar um tøkiliga tíð, hentleikar ella serligar ynskir, so eru vit her til at hjálpa tær hvønn veg á leiðini. Set teg í samband við okkum í dag fyri at byrja fyrireikingina av tínum næsta óforglemmiliga tiltaki í Fjósið!";
+                }
+            }
+        }
+
+        private string _booking
+        {
+            get
+            {
+                if (LanguageId == 2)
+                {
+                    return "Booking";
+                }
+                else
+                {
+                    return "Bóking";
                 }
             }
         }

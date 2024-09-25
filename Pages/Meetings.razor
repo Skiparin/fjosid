@@ -1,12 +1,12 @@
 ﻿@page "/Meetings"
 
-<PageTitle>Meetings and Conferences</PageTitle>
+<PageTitle>@_textTitle</PageTitle>
 
 <div>
     <div class="intro-section">
         <div class="intro-section__text-wrapper">
             <h2 class="intro-section__title">
-                Meetings and Conferences
+                @_textTitle
             </h2>
             <p class="intro-section__text">
                 @_text
@@ -24,7 +24,7 @@
             </div>
             <div class="details-section__text-wrapper">
                 <h2 class="details-section__title">
-                    Meeting Venue Rental Options
+                    @_textTitle_2
                 </h2>
                 <p class="details-section__text">
                     @_text_2
@@ -37,7 +37,7 @@
         <div class="section-to-animate details-section__text-image-section-2" style="background-color: #FFFFFF;">
             <div class="details-section__text-wrapper">
                 <h2 class="details-section__title">
-                    Amenities and Services
+                    @_textTitle_3
                 </h2>
                 <p class="details-section__text">
                     @_text_3
@@ -56,14 +56,14 @@
             </div>
             <div class="details-section__text-wrapper">
                 <h2 class="details-section__title">
-                    Booking and Reservation
+                    @_textTitle_4
                 </h2>
                 <p class="details-section__text">
                     @_text_4
                 </p>
                 <div class="details-section__button-wrapper">
                     <MudButton Style="background: rgba(0, 0, 0, 1); color: goldenrod;" @onclick="NavToBooking" ButtonType="ButtonType.Button" Variant="Variant.Filled">
-                        Booking
+                        @_booking
                     </MudButton>
                 </div>
             </div>

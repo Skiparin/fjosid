@@ -9,6 +9,21 @@ namespace Fjosid.Pages
 
         [Inject] NavigationManager NavigationManager { get; set; } = default!;
 
+        private string _textTitle
+        {
+            get
+            {
+                if (LanguageId == 2)
+                {
+                    return "Meetings and Conferences";
+                }
+                else
+                {
+                    return "Fundir og ráðstevnur";
+                }
+            }
+        }
+
         private string _text
         {
             get
@@ -20,6 +35,21 @@ namespace Fjosid.Pages
                 else
                 {
                     return "Vælkomin til Fjósið. Okkara høli er eitt fjølbroytt stað, sum lættliga kann verða brúkt bæði sum hugnaligur matsalur og sum virkisøki til ymisk tiltøk. Liggandi í Bø, er Fjósið væl egnað til ymisk sløg av tiltøkum, frá smærri samkomum til vinnuligar fundir. Um tú ætlar eitt seminar ella eina persónliga hátíð, bjóðar okkara leigutænasta eitt hóskandi og einfalt høli til títt tiltak. Við nýggjum hentleikum og eini blíðari atmosfæru, miðar Fjósið eftir at skapa eina hugnaliga uppliving fyri teg og tínar gestir.";
+                }
+            }
+        }
+
+        private string _textTitle_2
+        {
+            get
+            {
+                if (LanguageId == 2)
+                {
+                    return "Meeting Venue Rental Options";
+                }
+                else
+                {
+                    return "Leigumøguleikar fyri fundarhøli";
                 }
             }
         }
@@ -54,6 +84,21 @@ namespace Fjosid.Pages
             }
         }
 
+        private string _textTitle_3
+        {
+            get
+            {
+                if (LanguageId == 2)
+                {
+                    return "Amenities and Services";
+                }
+                else
+                {
+                    return "Tænastur og hentleikar";
+                }
+            }
+        }
+
         private string _text_3
         {
             get
@@ -84,6 +129,21 @@ namespace Fjosid.Pages
             }
         }
 
+        private string _textTitle_4
+        {
+            get
+            {
+                if (LanguageId == 2)
+                {
+                    return "Booking and Reservation";
+                }
+                else
+                {
+                    return "Bílegging og borðbílegging";
+                }
+            }
+        }
+
         private string _text_4
         {
             get
@@ -95,6 +155,21 @@ namespace Fjosid.Pages
                 else
                 {
                     return "Ert tú klár/ur at bíleggja Fjósið til tín næsta fund ella vinnuliga tiltak?\nAt tryggja tær ynsktu dagfestingina er einfalt. Við at trýsta á knøttin niðanfyri, kemur tú á bíleggingarsíðuna, har tú kanst senda eina bílegging. Um tú hevur brúk fyri hølinum til ein heilendan dag ella hálvan dag, so arbeiða vit saman við tær at laga tað til tín tíðarætlan. Eftir váttan, geva vit tær øll neyðug tíðindi og tryggja, at alt er klárt til eitt væleydnað tiltak. Tú kanst líta á Fjósið til at lyfta tínar fundir við okkara framúrskarandi høli og uppmerkssama tænastu.";
+                }
+            }
+        }
+
+        private string _booking
+        {
+            get
+            {
+                if (LanguageId == 2)
+                {
+                    return "Booking";
+                }
+                else
+                {
+                    return "Bóking";
                 }
             }
         }
