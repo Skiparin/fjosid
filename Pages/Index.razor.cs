@@ -113,7 +113,7 @@ namespace Fjosid.Pages
                 }
                 else
                 {
-                    return "Fjósið er staðsett í einum einføldum, væl umvældum fjósi, sum speglar ta friðsælu sjarmin hjá Bø. Vit hava hildið rúmið so upprunaligt sum til ber, og varðveitt ta náttúrligu einføldina í bygninginum, meðan vit hava gjørt tað til eitt hugnaligt stað fyri okkara gestum. Tað er ikki fínt, men vit trúgva, at hesin rustikki stílin gevur eina jarðbundna og heimliga atmosføru, sum bjóðar eitt friðarligt stað at njóta eina máltíð. Okkara mál er at skapa eitt rúm, sum kennist væl og heitt, har dentur er á góða mat og gott selskap.";
+                    return "Fjósið er staðsett í einum einføldum, væl umvældum fjósi, sum hóskar væl til umhvørvið. Vit hava varðveitt rúmið so upprunaligt sum til ber, samstundis sum vit hava gjørt tað til eitt hugnaligt stað til okkara gestir. Tað er ikki fínt, men vit halda, at hesin rustikki stílurin gevur eitt jarðbundið og heimligt huglag til at njóta eina góða máltíð. Okkara mál er at skapa eitt rúm, sum kennist fjálgt  og gott, har dentur er lagdur á tann góða matin og gott selskap.";
                 }
             }
         }
@@ -143,7 +143,7 @@ namespace Fjosid.Pages
                 }
                 else
                 {
-                    return "Okkara tilgongd til mat er einføld: vit brúka tað, sum er tøk rundan um okkum. Rávørurnar í okkara rættum koma frá okkara egna garði ella frá lokalum framleiðarum, so vit tryggja, at alt er frískt og stutt frá. Vit ala okkara egna seyð og neyt, og samstarva við lokalar laksabøndur fyri at bjóða einføld, heiðurlig máltíðir, sum framhevja smakkin úr okkara øki. Við at halda alt lokalt, kunnu vit bjóða rættir, sum bæði eru frískir og knýttir til samfelagið, meðan vit stuðla smáum, burðardyggum framleiðarum.";
+                    return "Okkara tilgongd til mat er einføld: vit brúka tað, sum er tøkt rundan um okkum. Rávørurnar í okkara rættum, koma frá okkum ella frá lokalum framleiðarum, soleiðis at vit kunnu tryggja okkum, at tað er stuttflutt og av góðari góðsku. Vit hava bæði seyð og neyt, og samstarva eisini við lokalar framleiðarar. Við at halda mest møguligt staðbundi, kunnu vit bjóða mat, sum eru  knýttir at samfelagnum, ímeðan vit stuðla smáum, burðardyggum framleiðarum.";
                 }
             }
         }
@@ -158,7 +158,7 @@ namespace Fjosid.Pages
                 }
                 else
                 {
-                    return "Rótað í samfelagnum";
+                    return "Staðbundi";
                 }
             }
         }
@@ -173,7 +173,7 @@ namespace Fjosid.Pages
                 }
                 else
                 {
-                    return "Fjósið verður rikið av fólki úr lokalsamfelagnum, og soleiðis vilja vit hava tað. Tað er eitt lítið stað, og vit dáma at halda tingini einfald, við fokus á at skapa eina heima- og hugnaliga atmosføru. Sum lokalt ogn vilja vit virðismeta sambandið við okkara grannar, og okkara mál er at bjóða eitt stað, har øll eru vælkomin. Antin tú ert úr grannalagnum ella ert á vitjan, vilja vit, at Fjósið skal kennast sum eitt stað, har fólk kunnu koma saman, njóta heiðurligan mat og føla seg sum ein part av nøkrum lokalt og ektað.";
+                    return "Fjósið verður rikið av fólki úr lokalsamfelagnum, og soleiðis vilja vit hava tað. Tað er eitt lítið stað, og vit dáma tað einfalt, við denti løgdum á at skapa eitt heimaligt og hugnaligt huglag.  Vit virðismeta sambandið við okkara grannar, og okkara mál er at bjóða eitt stað, har øll eru vælkomin. Antin tú ert úr grannalagnum ella ert á vitjan, vilja vit, at Fjósið skal kennast sum eitt stað, har fólk kunnu koma saman, njóta góðan mat og føla seg sum ein part av staðnum.";
                 }
             }
         }
